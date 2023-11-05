@@ -9,8 +9,8 @@ getgenv().Settings = {
         Mirror_Fractal = true,
     },
     Delay_Settings = {
-        Enabled = false, -- true or false
-        CheckingDelay = 3600,
+        Enabled = true, -- true or false
+        CheckingDelay = 60,
     },
     AutoRejoin = true,
 }
