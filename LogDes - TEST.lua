@@ -519,12 +519,6 @@ end)
 
 Nexus:OnButtonClick('LogSheet', function() 
     pcall(function()
-        local ts = game:GetService("TeleportService") local p = game.Players.LocalPlayer ts:Teleport(game.PlaceId, p)
-    end)
-end)
-
-Nexus:OnButtonClick('Shutdownbtn', function() 
-    pcall(function()
         local HttpService = game:GetService("HttpService")
 
 		local sheetBestUrl = "https://sheet.best/api/sheets/62159a62-6fa8-4c47-834c-0207d230d072"
@@ -550,7 +544,12 @@ Nexus:OnButtonClick('Shutdownbtn', function()
 		else
 			print("Error:", response)
 		end
+    end)
+end)
 
+Nexus:OnButtonClick('Shutdownbtn', function() 
+    pcall(function()
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
     end)
 end)
 
