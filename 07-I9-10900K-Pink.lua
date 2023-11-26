@@ -65,7 +65,7 @@ _G.KaitunConfig = {
 	-- Devil Fruit
 
 	["Select Main Devil Fruit Sniper"] = {"Dragon-Dragon","Dough-Dough","Leopard-Leopard","Mammoth-Mammoth"}, -- ผลหลักที่จะกินเเทนผลรอง
-	["Select Sub Devil Fruit Sinper"] = {"Buddha-Buddha","Ice-Ice","Dark-Dark","Light-Light"}, -- ผลรองจะกินไว้ก่อนเเล้วพอผลหลักมีก้จะเปลียนไปกินผิดหลัก
+	["Select Sub Devil Fruit Sinper"] = {"Buddha-Buddha","Dark-Dark","Light-Light"}, -- ผลรองจะกินไว้ก่อนเเล้วพอผลหลักมีก้จะเปลียนไปกินผิดหลัก
 	["Allow Eat Fruit In Inventory"] = true,
 	["Start Sniper"] = true,
 
