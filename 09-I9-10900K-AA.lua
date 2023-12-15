@@ -1,4 +1,5 @@
 wait(5)
+_G.EmuMode = true
 _G.RoyxSpecialMode = "Hell Factory";
 _G["External Config"] = {
     ["Kai Gems"] = true, -- true / false
