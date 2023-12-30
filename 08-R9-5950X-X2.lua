@@ -12,7 +12,7 @@ _G.LogsDes = {
     ["DelaySend"] = 5 -- วินาที
 }
 _G.MainSettings = {
-        ["EnabledHOP"] = true, -- เปิด HOP ( มันไม่มีอยู่ละใส่มาเท่ๆ )
+        ["EnabledHOP"] = false, -- เปิด HOP ( มันไม่มีอยู่ละใส่มาเท่ๆ )
         ['FPSBOOST'] = true, -- ภาพกาก
         ["FPSLOCKAMOUNT"] = 15, -- จำนวน FPS
         ['WhiteScreen'] = true, -- จอขาว
