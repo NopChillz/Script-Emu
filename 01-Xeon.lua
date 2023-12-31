@@ -1,105 +1,85 @@
-repeat task.wait() until game:IsLoaded(5)
-repeat task.wait() until game.Players
-repeat task.wait() until game.Players.LocalPlayer
-repeat task.wait() until game.Players.LocalPlayer:FindFirstChild("PlayerGui")
-repeat task.wait() until game.Players.LocalPlayer.PlayerGui:FindFirstChild("Main");
-_G.Team = "Pirate" -- Marine / Pirate
-_G.KAITUN_SCRIPT = true
-_G.LogsDes = {
-    ["Enabled"] = false, -- เปิดการใช้งาน
-    ["SendAlias"] = false, -- เปิดการส่ง Alias
-    ["SendDescription"] = false, -- เปิดการส่ง Des
-    ["DelaySend"] = 5 -- วินาที
-}
-_G.MainSettings = {
-        ["EnabledHOP"] = false, -- เปิด HOP ( มันไม่มีอยู่ละใส่มาเท่ๆ )
-        ['FPSBOOST'] = true, -- ภาพกาก
-        ["FPSLOCKAMOUNT"] = 15, -- จำนวน FPS
-        ['WhiteScreen'] = true, -- จอขาว
-        ['CloseUI'] = false, -- ปิด Ui
-        ["NotifycationExPRemove"] = false, -- ลบ ExP ที่เด้งตอนฆ่ามอน
-        ['AFKCheck'] = 180, -- ถ้ายืนนิ่งเกินวิที่ตั้งมันจะรีเกม
-        ["LockFragments"] = 200000, -- ล็อคเงินม่วง
-        ["LockFruitsRaid"] = { -- ล็อคผลที่ไม่เอาไปลงดัน
-            [1] = "Dough-Dough",
-            [2] = "Dragon-Dragon",
-            [3] = "Leopard-Leopard",
-            [4] = "Kitsune-Kitsune",
-            [5] = "Rex-Rex",
-        }
-    }
-_G.Fruits_Settings = { -- ตั้งค่าผล
-    ['Main_Fruits'] = {'Dough-Dough','Leopard-Leopard','Kitsune-Kitsune'}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
-    ['Select_Fruits'] = {"Light-Light", "Dark-Dark", "Rumble-Rumble", "Magma-Magma", "Buddha-Buddha"} -- กินหรือซื้อตอนไม่มีผล
-}
-_G.Quests_Settings = { -- ตั้งค่าเควสหลักๆ
-    ['Rainbow_Haki'] = true,
-    ["MusketeerHat"] = true,
-    ["PullLever"] = true,
-    ['DoughQuests_Mirror'] = {
-        ['Enabled'] = true,
-        ['UseFruits'] = true
-    }        
-}
-_G.Races_Settings = { -- ตั้งค่าเผ่า
-    ['Race'] = {
-        ['EnabledEvo'] = true,
-        ["v2"] = true,
-        ["v3"] = true,
-        ["Races_Lock"] = {
-            ["Races"] = { -- Select Races U want
-                ["Mink"] = true,
-                ["Human"] = true,
-                ["Fishman"] = true
-            },
-            ["RerollsWhenFragments"] = 20000 -- Random Races When Your Fragments is >= Settings
-        }
-    }
-}
-_G.Settings_Melee = { -- หมัดที่จะทำ
-    ['Superhuman'] = true,
-    ['DeathStep'] = true,
-    ['SharkmanKarate'] = true,
-    ['ElectricClaw'] = true,
-    ['DragonTalon'] = true,
-    ['Godhuman'] = true
-}
-_G.FarmMastery_Settings = {
-    ['Melee'] = true,
-    ['Sword'] = true,
-    ['DevilFruits'] = true,
-    ['Select_Swords'] = {
-        ["AutoSettings"] = true, -- ถ้าเปิดอันนี้มันจะเลือกดาบให้เองหรือฟาร์มทุกดาบนั่นเอง
-        ["ManualSettings"] = { -- ถ้าปรับ AutoSettings เป็น false มันจะฟาร์มดาบที่เลือกตรงนี้ ตัวอย่างข้างล่าง
-            "Saber",
-            "Buddy Sword"
-        }
-    }
-}
-_G.SwordSettings = { -- ดาบที่จะทำ
-    ['Saber'] = false,
-    ["Pole"] = true,
-    ['MidnightBlade'] = true,
-    ['Shisui'] = true,
-    ['Saddi'] = true,
-    ['Wando'] = true,
-    ['Yama'] = true,
-    ['Rengoku'] = true,
-    ['Canvander'] = true,
-    ['BuddySword'] = true,
-    ['TwinHooks'] = true,
-    ['HallowScryte'] = true,
-    ['TrueTripleKatana'] = true,
-    ['CursedDualKatana'] = true
-}
-_G.GunSettings = { -- ปืนที่จะทำ
-    ['Kabucha'] = true,
-    ['SerpentBow'] = true,
-    ['SoulGuitar'] = true
-}
--- Script Here !!!
+shared.Team = "Pirates"
+getgenv().Configs = {
+    FpsBoost = true,
+    SkipFarm = true,
+    HopIfCantKill = true,
+    BlockAllHop = false,
 
-getgenv().Key = "MARU-0D4F-3GS36-UP83-PRZXM-FRSO"
-getgenv().id = "1016006967149482054"
-getgenv().Script_Mode = "Kaitun_Script"
-loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MaruBitkub/main/Mobile.lua"))()
+    FastAttack = true,
+    NewFastAttack = true,
+    NoAttackAnimation = true,
+    
+    StartKaitun = true,
+    -- World 1
+    AutoPole = true, -- จะตีเเค่ถ้ามันเกิดไม่ได้ตีจนกว่าจะได้
+    AutoSaber = false,
+    
+    AutoSecondSea = true,
+    -- World 2
+    AutoRengoku = true,
+    AutoQuestFlower = true,
+    AutoRaceV3 = false,
+    AutoBartiloQuest = true,
+    AutoCursedCaptain = true,
+    AutoDarkbeard = true,
+    AutoFactory = true,
+    AutoThirdSea = true,
+    SkipGetItemGuitar = true, -- จะไม่ หาของทำ soul guiter ในโลก 2 เบบ หาจนกว่าจะได้ will not find item until get all item for do soul guiter ( open recommend เเนะนำให้เปิด )
+    AlliesFruit = {"Dough-Dough","Leopard-Leopard","Kitsune-Kitsune"}, -- จะไม่ใช้ผลพวกนี้ในการเปิดประตูไปโลก3
+    -- World 3
+    AutoHallowScythe = true,
+    AutoBuddySword = true,
+    AutoDoughKing = true,
+    AutoSpikeyTrident = true,
+    AutoTushita = true,
+    AutoEliteHunter = true,
+    AutoDarkDagger = true,
+    AutoYama = true,
+    AutoCanvander = true,
+    AutoSoulGuitar = true, 
+    AutoRainbowHaki = true,
+    AutoCursedDualKatana = true,
+    
+    -- Fighting Style 
+    
+    AutoGodHuman = true,
+    AutoSuperhuman = true,
+    AutoDeathStep = true,
+    AutoSharkmanKarate = true,
+    AutoElectricClaw = true,
+    AutoDargonTalon = true,
+    
+    AutoDFMastery = true,
+    SettingsSkill = { -- ถ้าไม่ใส่จะใช้ mode auto
+        -- ["Z"] = 0.1,
+        -- ["X"] = 0.1,
+        -- ["C"] = 0.1,
+        -- ["V"] = 0.1, -- อันไหนไม่เอาลบออกไปเลย
+    },
+    AutoSwordMastery = true,
+    SelectRaritySword = {"Mythical","Legendary"}, -- Common , Uncommon,Rare,Legendary,Mythical
+    
+    SelectRedeemCodeLevel = 1,
+    
+    -- Raids
+    
+    SelectRateFruitRaid = 1000000, -- if fruit price less u rate then we use it to auto raids
+    LimitFragmentsRaids = 200000,
+    
+    -- Devil Fruit
+        
+    SelectMainDF = {"Dough-Dough","Leopard-Leopard","Kitsune-Kitsune"}, -- ผลหลักที่จะกินเเทนผลรอง
+    SelectSubDF = {"Dark-Dark","Human-Human: Buddha","Light-Light","Dragon-Dragon","Mammoth-Mammoth"}, -- ผลรองจะกินไว้ก่อนเเล้วพอผลหลักมีก้จะเปลียนไปกินผิดหลัก
+    AllowEatDFInventory = true,
+    StartSniper = true,
+    
+    -- CPU
+    
+    LockFPS = 15,
+    LockFPSNow = true,
+    WhiteScreen = true
+}
+
+_G.Key = "GU75P-4NW1H-A9PPN"
+_G.DiscordId = "1016006967149482054"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NightsTimeZ/RoyryX/main/Loader.lua"))()
