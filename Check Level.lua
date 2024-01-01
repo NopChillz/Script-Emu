@@ -2,6 +2,7 @@ print("Scrpint Check Level Work !!")
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local LevelData = LocalPlayer.Data.Level
+local OldLevel = LevelData -- เก็บเลเวลเก่า
 
 -- Function Teleport 
 local PlaceID = game.PlaceId
@@ -75,21 +76,25 @@ function Teleport(v)
     end
 end
 
-local function CheckLevel()
-    local initialLevel = LevelData.Value  -- เลเวลเริ่มต้น
-
+function CheckLevel()
     while true do
-        wait(20)  -- รอ 3 นาที
+        wait(180) -- รอ 3 นาที
 
-        if LevelData.Value == initialLevel then
-            Teleport(true)
+        local CurrentLevel = LevelData -- เลเวลปัจจุบัน
+
+        if CurrentLevel == OldLevel then
+            Teleport(true))
             print("Hop Server")
         else
-            print("Level Up Cekeck Succeed !!")
-            initialLevel = LevelData.Value  -- ปรับค่าเลเวลเริ่มต้นเป็นค่าใหม่
+            print("Let's go farm)
         end
+
+        OldLevel = CurrentLevel -- อัปเดตเลเวลเก่าเป็นเลเวลปัจจุบัน
     end
 end
+
+-- เรียกใช้งานฟังชั่น CheckLevel
+CheckLevel()
 
 -- เรียกใช้ฟังก์ชั่นเพื่อเริ่มต้นตรวจสอบเลเวล
 CheckLevel()
