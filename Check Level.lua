@@ -4,7 +4,7 @@ local module = loadstring(game:HttpGet"https://raw.githubusercontent.com/LeoKhol
 function CheckLevel()
 	while true do
 		local oldlevel = game:GetService("Players").LocalPlayer.Data.Level.Value
-		wait(180)
+		wait(300)
 		local level = game:GetService("Players").LocalPlayer.Data.Level.Value
 		if level == oldlevel then
 			module:Teleport(game.PlaceId)
