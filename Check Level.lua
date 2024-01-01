@@ -79,7 +79,7 @@ local function CheckLevel()
     local initialLevel = LevelData.Value  -- เลเวลเริ่มต้น
 
     while true do
-        wait(10)  -- รอ 3 นาที
+        wait(20)  -- รอ 3 นาที
 
         if LevelData.Value == initialLevel then
             Teleport(true)
