@@ -86,7 +86,7 @@ function CheckLevel()
             Teleport(true)
             print("Hop Server")
         else
-            print("Let's go farm)
+            print("Let's go farm")
         end
 
         OldLevel = CurrentLevel -- อัปเดตเลเวลเก่าเป็นเลเวลปัจจุบัน
