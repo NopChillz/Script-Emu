@@ -16,7 +16,7 @@ function CheckLevel()
 			print("Hop Server Succeed")
 		end
 		print("Old Level : " ..oldlevel)
-		print("Level : " ..level)
+		print("Current Level : " ..level)
 	end
 end
 
