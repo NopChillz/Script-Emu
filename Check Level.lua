@@ -1,3 +1,4 @@
+print("script")
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local LevelData = LocalPlayer.Data.Level
