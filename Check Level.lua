@@ -4,20 +4,20 @@ local module = loadstring(game:HttpGet("https://raw.githubusercontent.com/LeoKho
 
 function FixNotFarm()
 	while true do
-		local oldlevel = game:GetService("Players").LocalPlayer.Data.Level.Value
+		local fuckoldlevel = game:GetService("Players").LocalPlayer.Data.Level.Value
 		wait(300)
-		local level = game:GetService("Players").LocalPlayer.Data.Level.Value
-		if level == 2550 and oldlevel == 2550 then
+		local currentlevelshit = game:GetService("Players").LocalPlayer.Data.Level.Value
+		if currentlevelshit == 2550 and fuckoldlevel == 2550 then
 			print("-------------------------------")
 			print("[Loop Every 5 Minutes] !!")
 			print("* Lv.Max | No Hop *")
 			print("-------------------------------")
-		elseif level == oldlevel then
+		elseif currentlevelshit == fuckoldlevel then
 			module:Teleport(game.PlaceId)
 			print("Hop Server Succeed")
 		end
-		print("Old Level : " ..oldlevel)
-		print("Current Level : " ..level)
+		print("Old Level : " ..fuckoldlevel)
+		print("Current Level : " ..currentlevelshit)
 	end
 end
 
