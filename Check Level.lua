@@ -6,8 +6,8 @@ local OldLevel = LevelData -- เก็บเลเวลเก่า
 
 -- Function Teleport 
 local PlaceID = game.PlaceId
-local Run = game:GetService("RunService") ;
-local SetSkill = nil ; 
+local Run = game:GetService("RunService")
+local SetSkill = nil 
 local AllIDs = {}
 local foundAnything = ""
 local actualHour = os.date("!*t").hour
@@ -19,6 +19,7 @@ if not File then
     table.insert(AllIDs, actualHour)
     writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
 end
+
 function TPReturner(kopkuy)
     local Site;
     if foundAnything == "" then
@@ -58,21 +59,12 @@ function TPReturner(kopkuy)
                     writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
                     wait()
                     if kopkuy  then
-                        game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
+                        game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
                     end
                 end)
                 wait(4)
             end
         end
-    end
-end
-
-function Teleport(v)
-    while true do
-        wait()
-        pcall(function()
-            TPReturner(v)
-        end)
     end
 end
 
