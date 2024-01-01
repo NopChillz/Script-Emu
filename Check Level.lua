@@ -4,7 +4,7 @@ print("[Script] Check Level Work !!")
 function CheckLevel()
 	while true do
 		local oldlevel = game:GetService("Players").LocalPlayer.Data.Level.Value
-		wait(60)
+		wait(180)
 		local level = game:GetService("Players").LocalPlayer.Data.Level.Value
 		if level == 2550 and oldlevel == 2550 then
 			print("-------------------------------")
