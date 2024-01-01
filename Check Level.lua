@@ -1,10 +1,11 @@
 wait(5)
 print("[Script] Check Level Work !!")
+local module = loadstring(game:HttpGet("https://raw.githubusercontent.com/LeoKholYt/roblox/main/lk_serverhop.lua"))()
 
 function CheckLevel()
 	while true do
 		local oldlevel = game:GetService("Players").LocalPlayer.Data.Level.Value
-		wait(180)
+		wait(10)
 		local level = game:GetService("Players").LocalPlayer.Data.Level.Value
 		if level == 2550 and oldlevel == 2550 then
 			print("-------------------------------")
@@ -12,7 +13,7 @@ function CheckLevel()
 			print("* Lv.Max | No Hop *")
 			print("-------------------------------")
 		elseif level == oldlevel then
-			game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId)
+			module:Teleport(game.PlaceId)
 			print("Hop Server Succeed")
 		end
 		print("Old Level : " ..oldlevel)
