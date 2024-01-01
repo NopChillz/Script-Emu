@@ -74,7 +74,7 @@ function Teleport(v)
     end
 end
 
-function CheckLevel()
+local function CheckLevel()
     local initialLevel = LevelData.Value  -- เลเวลเริ่มต้น
 
     while true do
