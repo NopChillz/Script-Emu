@@ -78,7 +78,7 @@ end
 
 function CheckLevel()
     while true do
-        wait(180) -- รอ 3 นาที
+        wait(30) -- รอ 3 นาที
 
         local CurrentLevel = LevelData -- เลเวลปัจจุบัน
 
