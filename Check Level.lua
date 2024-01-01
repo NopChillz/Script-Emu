@@ -1,3 +1,4 @@
+wait(5)
 print("[Script] Check Level Work !!")
 local module = loadstring(game:HttpGet"https://raw.githubusercontent.com/LeoKholYt/roblox/main/lk_serverhop.lua")()
 
