@@ -2,7 +2,7 @@ wait(5)
 print("[Script] Check Level Work !!")
 local module = loadstring(game:HttpGet("https://raw.githubusercontent.com/LeoKholYt/roblox/main/lk_serverhop.lua"))()
 
-function CheckLevel()
+function FixNotFarm()
 	while true do
 		local oldlevel = game:GetService("Players").LocalPlayer.Data.Level.Value
 		wait(300)
@@ -21,4 +21,4 @@ function CheckLevel()
 	end
 end
 
-CheckLevel()
+FixNotFarm()
