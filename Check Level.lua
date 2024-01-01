@@ -83,7 +83,7 @@ function CheckLevel()
         local CurrentLevel = LevelData -- เลเวลปัจจุบัน
 
         if CurrentLevel == OldLevel then
-            Teleport(true))
+            Teleport(true)
             print("Hop Server")
         else
             print("Let's go farm)
