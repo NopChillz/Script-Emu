@@ -9,7 +9,7 @@ function CheckLevel()
 		local level = game:GetService("Players").LocalPlayer.Data.Level.Value
 		if level == 2550 and oldlevel == 2550 then
 			print("-------------------------------")
-			print("[Loop Every 3 Minutes] !!")
+			print("[Loop Every 5 Minutes] !!")
 			print("* Lv.Max | No Hop *")
 			print("-------------------------------")
 		elseif level == oldlevel then
