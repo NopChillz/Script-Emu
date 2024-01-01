@@ -5,14 +5,14 @@ local module = loadstring(game:HttpGet"https://raw.githubusercontent.com/LeoKhol
 function CheckLevel()
 	while true do
 		local oldlevel = game:GetService("Players").LocalPlayer.Data.Level.Value
-		wait(300)
+		wait(60)
 		local level = game:GetService("Players").LocalPlayer.Data.Level.Value
 		if level == oldlevel then
 			module:Teleport(game.PlaceId)
 			print("Hop Server Succeed")
-		else
+		elseif math.abs(oldlevel - level) == 2550 then
 			print("-------------------------------")
-			print("[Loop : Every 3 Minutes]")
+			print("[Loop Every 3 Minutes]")
 			print("Old Level : " ..oldlevel)
 			print("Current Level :" ..level)
 			print("-------------------------------")
