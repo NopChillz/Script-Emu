@@ -1,4 +1,4 @@
-print("script")
+print("Scrpint Check Level Work !!")
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local LevelData = LocalPlayer.Data.Level
