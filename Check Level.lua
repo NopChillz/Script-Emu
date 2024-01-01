@@ -66,13 +66,15 @@ function TPReturner(kopkuy)
 end
 
 function Teleport(v)
-    while true do wait()
+    while true do
+        wait()
         pcall(function()
             TPReturner(v)
         end)
     end
+end
 
-local function CheckLevel()
+function CheckLevel()
     local initialLevel = LevelData.Value  -- เลเวลเริ่มต้น
 
     while true do
