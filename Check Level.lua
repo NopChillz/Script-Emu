@@ -33,40 +33,39 @@ function TPReturner(kopkuy)
     end
     local num = 0;
     for i,v in pairs(Site.data) do
-        local Possible = true
-        ID = tostring(v.id)
-        if tonumber(v.maxPlayers) > tonumber(v.playing) then
-            for _,Existing in pairs(AllIDs) do
-                if num ~= 0 then
-                    if ID == tostring(Existing) then
-                        Possible = false
-                    end
-                else
-                    if tonumber(actualHour) ~= tonumber(Existing) then
-                        local delFile = pcall(function()
-                            delfile("NotSameServers.json")
-                            AllIDs = {}
-                            table.insert(AllIDs, actualHour)
-                        end)
-                    end
+    local Possible = true
+    ID = tostring(v.id)
+    if tonumber(v.maxPlayers) > tonumber(v.playing) then
+        for _,Existing in pairs(AllIDs) do
+            if num ~= 0 then
+                if ID == tostring(Existing) then
+                    Possible = false
                 end
-                num = num + 1
+            else
+                if tonumber(actualHour) ~= tonumber(Existing) then
+                    local delFile = pcall(function()
+                        delfile("NotSameServers.json")
+                        AllIDs = {}
+                        table.insert(AllIDs, actualHour)
+                    end)
+                end
             end
-            if Possible == true then
-                table.insert(AllIDs, ID)
+            num = num + 1
+        end
+        if Possible == true then
+            table.insert(AllIDs, ID)
+            wait()
+            pcall(function()
+                writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
                 wait()
-                pcall(function()
-                    writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
-                    wait()
-                    if kopkuy  then
-                        game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
-                    end
-                end)
-                wait(4)
-            end
+                if kopkuy  then
+                    game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+                end
+            end)
+            wait(4)
         end
     end
-end
+end -- นี่คือตำแหน่งที่ควรมี end
 
 function CheckLevel()
     while true do
