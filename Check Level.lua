@@ -10,7 +10,7 @@ function CheckLevel()
 		if level == oldlevel then
 			module:Teleport(game.PlaceId)
 			print("Hop Server Succeed")
-		elseif level == oldlevel and level == 2550 then
+		elseif level == 2550 and oldlevel == 2550 then
 			print("-------------------------------")
 			print("[Loop Every 3 Minutes]")
 			print("Old Level : " ..oldlevel)
