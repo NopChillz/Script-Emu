@@ -83,9 +83,9 @@ local function CheckLevel()
 
         if LevelData.Value == initialLevel then
             Teleport(true)
-            print("Level เท่าเดิมหลังจาก 3 นาที!")
+            print("Hop Server")
         else
-            print("Level ได้เปลี่ยนแล้ว!")
+            print("Level Up Cekeck Succeed !!")
             initialLevel = LevelData.Value  -- ปรับค่าเลเวลเริ่มต้นเป็นค่าใหม่
         end
     end
