@@ -522,4 +522,6 @@ Nexus:OnButtonClick('Shutdownbtn', function()
     end)
 end)
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NopChillz/Script-Emu/main/Check%20Level.lua"))()
+
 -- getgenv().SetDescription(GetNewAwake()..' | W : '..WorldText.." B : "..Abbreviate(game.Players.LocalPlayer.Data.Beli.Value)..' F : '..Abbreviate(game.Players.LocalPlayer.Data.Fragments.Value).." "..CheckHSNew()..CheckSGTNew()..CheckTushita()..CheckYama()..CheckDG()..CheckDarkFragment()..'\n FruitsInv: '..GetFruitInU())
