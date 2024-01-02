@@ -5,11 +5,11 @@ local module = loadstring(game:HttpGet("https://raw.githubusercontent.com/LeoKho
 function FixNotFarm()
 	while true do
 		local fuckoldlevel = game:GetService("Players").LocalPlayer.Data.Level.Value
-		wait(300)
+		wait(420)
 		local currentlevelshit = game:GetService("Players").LocalPlayer.Data.Level.Value
 		if currentlevelshit == 2550 and fuckoldlevel == 2550 then
 			print("-------------------------------")
-			print("[Loop Every 5 Minutes] !!")
+			print("[Loop Every 7 Minutes] !!")
 			print("* Lv.Max | No Hop *")
 			print("-------------------------------")
 		elseif currentlevelshit == fuckoldlevel then
