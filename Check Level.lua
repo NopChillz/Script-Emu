@@ -13,11 +13,12 @@ function FixNotFarm()
 			print("* Lv.Max | No Hop *")
 			print("-------------------------------")
 		elseif currentlevelshit == fuckoldlevel then
+			print("Hop Check Level")
 			module:Teleport(game.PlaceId)
-			print("Hop Server Succeed")
 		end
 		print("Old Level : " ..fuckoldlevel)
 		print("Current Level : " ..currentlevelshit)
+		wait(1)
 	end
 end
 
@@ -35,8 +36,15 @@ function CheckCFrameNotFarm()
 			print("Hop Current CFrame == Old CFrame")
 			module:Teleport(game.PlaceId)
 		end
+		wait(1)
 	end
 end
 
-FixNotFarm()
-CheckCFrameNotFarm()
+-- สร้าง coroutine สำหรับลูปที่ 1
+local coroutine1 = coroutine.create(FixNotFarm)
+
+-- สร้าง coroutine สำหรับลูปที่ 2
+local coroutine2 = coroutine.create(CheckCFrameNotFarm)
+
+coroutine.resume(coroutine1)
+coroutine.resume(coroutine2)
