@@ -6,5 +6,5 @@ while true do
     local currentCFrame = plr.Character.HumanoidRootPart.CFrame
 	print(oldCFrame)
 	print(currentCFrame)
-    end
+    
 end
