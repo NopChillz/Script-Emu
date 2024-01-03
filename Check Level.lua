@@ -1,5 +1,5 @@
 wait(5)
-print("[Script] Check Level Work !!")
+print("[Script] Check Level Work and Don'tFarm !!")
 local module = loadstring(game:HttpGet("https://raw.githubusercontent.com/LeoKholYt/roblox/main/lk_serverhop.lua"))()
 
 function FixNotFarm()
@@ -21,4 +21,22 @@ function FixNotFarm()
 	end
 end
 
+function CheckCFrameNotFarm()
+	while true do
+		local plr = game.Players.LocalPlayer 
+
+		local oldCFrame = plr.Character.HumanoidRootPart.CFrame.Position
+		wait(600)
+		local currentCFrame = plr.Character.HumanoidRootPart.CFrame.Position
+
+		if currentCFrame ~= oldCFrame then
+			print("Farm Work !!")
+		elseif currentCFrame == oldCFrame then
+			print("Hop Current CFrame == Old CFrame")
+			module:Teleport(game.PlaceId)
+		end
+	end
+end
+
 FixNotFarm()
+CheckCFrameNotFarm()
