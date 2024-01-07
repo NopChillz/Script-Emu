@@ -18,5 +18,5 @@ _G.Race_Evo = {
     ['Enabled'] = true
 }
 
-script_key="qUnzzXZDkelkMApmBAwuFNNUXADKIdir";
+script_key="HueDOwlmQlXJMaKJTSxDIocVNuTgICjZ";
 loadstring(game:HttpGet("https://raw.githubusercontent.com/londnee/code/main/m.lua"))()
