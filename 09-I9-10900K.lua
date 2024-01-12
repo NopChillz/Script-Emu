@@ -4,7 +4,7 @@ _G.Delay_Upload = 300 -- โชว์ข้อมูลใหม่ทุกๆ 
 _G.Bypass_Tp = true -- วาปฟาร์ม
 
 _G.Select_Fruit = {
-    ['Main'] = {''}, -- เลือกผลปีศาจหลัก
+    ['Main'] = {}, -- เลือกผลปีศาจหลัก
     ['Select Fruit'] = {'Dark-Dark','Human-Human: Buddha','Light-Light','Dragon-Dragon','Mammoth-Mammoth','Kitsune-Kitsune'.'Dough-Dough','Leopard-Leopard'} -- เลือกผลปีศาจ
 }
 _G.Mastery_Farm = { -- ฟามมาสเตอรี่
