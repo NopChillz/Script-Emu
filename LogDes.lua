@@ -383,9 +383,9 @@ end
 function CheckLevel()
     RaceText = ''
     if game:GetService("Players").LocalPlayer.Data.Level.Value < 2550 then
-        RaceText = 'Lv. '..game:GetService("Players").LocalPlayer.Data.Level.Value.." "
+        RaceText = 'Lv.'..game:GetService("Players").LocalPlayer.Data.Level.Value.." "
     else
-        RaceText = 'Lv. MAX '
+        RaceText = 'Lv.MAX | '
     end
     return RaceText
 end
@@ -462,7 +462,7 @@ end
 task.spawn(function()
     while true do
 		pcall(function()
-            getgenv().SetDescription(CheckLevel()..GetNewAwake().." | "..game:GetService("Players").LocalPlayer.Data.Race.Value.." ["..CheckRaceV().."]".." Melee : "..GetAllMeleeNew().." W : "..WorldText..' Fruits: '..GetFruitInU())
+            getgenv().SetDescription(CheckLevel() " | "..GetNewAwake().. " Beli : " .. game.Players.LocalPlayer.Data.Beli.Value .. " | F : " .. game.Players.LocalPlayer.Data.Fragments.Value .. " | "..game:GetService("Players").LocalPlayer.Data.Race.Value.." ["..CheckRaceV().."]".." Melee : "..GetAllMeleeNew().." | World : "..WorldText..' | Fruits: '..GetFruitInU())
 			getgenv().SetAlias(GetGOD()..CheckMirrorFractalNew()..CheckVK()..CheckCDKNew()..CheckSGTNew())
         end);
         if getgenv().Settings.Delay_Settings.Enabled == true then
