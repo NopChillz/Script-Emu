@@ -197,6 +197,21 @@ task.spawn(function()
     end
 end)
 
+function AbbreviateNumber(number)
+    local suffixes = {"", "K", "M", "B", "T"}
+    local suffixIndex = 1
+
+    while number >= 1000 and suffixIndex < #suffixes do
+        number = number / 1000
+        suffixIndex = suffixIndex + 1
+    end
+
+    -- Format the number with two decimal places
+    local formattedNumber = string.format("%.2f", number)
+
+    return formattedNumber .. suffixes[suffixIndex]
+end
+
 local function GetNewAwake()
     AwakeText = ''
     pcall(function()
@@ -391,13 +406,15 @@ function CheckLevel()
 end
 
 function CheckBeli()
-    RaceText = 'Beli : '..game:GetService("Players").LocalPlayer.Data.Beli.Value.." | "
-    return RaceText
+    local BeliValue = game:GetService("Players").LocalPlayer.Data.Beli.Value
+    local BeliText = 'Beli : ' .. AbbreviateNumber(BeliValue) .. " | "
+    return BeliText
 end
 
 function CheckFragment()
-    RaceText = 'Fragment : '..game:GetService("Players").LocalPlayer.Data.Fragments.Value.." | "
-    return RaceText
+    local FragmentValue = game:GetService("Players").LocalPlayer.Data.Fragments.Value
+    local FragmentValue = 'F : ' .. AbbreviateNumber(FragmentValue) .. " | "
+    return FragmentValue
 end
 
 local function CheckSGTNew()
@@ -472,7 +489,7 @@ end
 task.spawn(function()
     while true do
 		pcall(function()
-            getgenv().SetDescription(CheckLevel()..GetNewAwake()..CheckBeli()..CheckFragment().. " | " ..game:GetService("Players").LocalPlayer.Data.Race.Value.." ["..CheckRaceV().."] | ".." Melee : "..GetAllMeleeNew().." | World : "..WorldText..' | Fruits: '..GetFruitInU())
+            getgenv().SetDescription(CheckLevel()..GetNewAwake()..CheckBeli()..CheckFragment().. " | Race : " ..game:GetService("Players").LocalPlayer.Data.Race.Value.." ["..CheckRaceV().."] | ".." Melee : "..GetAllMeleeNew().." | World : "..WorldText..' | Fruits : '..GetFruitInU())
 			getgenv().SetAlias(GetGOD()..CheckMirrorFractalNew()..CheckVK()..CheckCDKNew()..CheckSGTNew())
         end);
         if getgenv().Settings.Delay_Settings.Enabled == true then
