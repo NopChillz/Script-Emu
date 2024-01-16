@@ -11,7 +11,7 @@ getgenv().Configs = {
     FpsBoost = true,
     SkipFarm = true,
     HopIfCantKill = false,
-    BlockAllHop = false,
+    BlockAllHop = true,
 
     FastAttack = true,
     NewFastAttack = true,
