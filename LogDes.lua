@@ -413,7 +413,7 @@ end
 
 function CheckFragment()
     local FragmentValue = game:GetService("Players").LocalPlayer.Data.Fragments.Value
-    local FragmentValue = 'F : ' .. AbbreviateNumber(FragmentValue) .. " | "
+    local FragmentValue = 'Fragment : ' .. AbbreviateNumber(FragmentValue)
     return FragmentValue
 end
 
