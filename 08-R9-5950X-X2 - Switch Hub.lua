@@ -1,11 +1,11 @@
 if not game:IsLoaded() then repeat game.Loaded:Wait(5) until game:IsLoaded() end
 
 _G.Delay_Upload = 300 -- โชว์ข้อมูลใหม่ทุกๆ 300วิ
-_G.Bypass_Tp = false -- วาปฟาร์ม
+_G.Bypass_Tp = true -- วาปฟาร์ม
 
 _G.Select_Fruit = {
-    ['Main'] = {'Dough-Dough','Leopard-Leopard','Kitsune-Kitsune'}, -- เลือกผลปีศาจหลัก
-    ['Select Fruit'] = {'Dark-Dark','Human-Human: Buddha','Light-Light','Dragon-Dragon','Mammoth-Mammoth'} -- เลือกผลปีศาจ
+    ['Main'] = {''}, -- เลือกผลปีศาจหลัก
+    ['Select Fruit'] = {'Dark-Dark','Human-Human: Buddha','Light-Light','Dragon-Dragon','Mammoth-Mammoth','Kitsune-Kitsune','Dough-Dough','Leopard-Leopard'} -- เลือกผลปีศาจ
 }
 _G.Mastery_Farm = { -- ฟามมาสเตอรี่
     ['Melee'] = true,
@@ -18,5 +18,5 @@ _G.Race_Evo = {
     ['Enabled'] = true
 }
 
-script_key="PEDDznDXwNYinkXLsrSAfHVOgoVcsCcE";
+script_key="OtNoTVUFXqqnRdIOrLQERSqEjyvEylzB";
 loadstring(game:HttpGet("https://raw.githubusercontent.com/londnee/code/main/m.lua"))()
