@@ -197,21 +197,6 @@ task.spawn(function()
     end
 end)
 
-function AbbreviateNumber(number)
-    local suffixes = {"", "K", "M", "B", "T"}
-    local suffixIndex = 1
-
-    while number >= 1000 and suffixIndex < #suffixes do
-        number = number / 1000
-        suffixIndex = suffixIndex + 1
-    end
-
-    -- Format the number with two decimal places
-    local formattedNumber = string.format("%.2f", number)
-
-    return formattedNumber .. suffixes[suffixIndex]
-end
-
 local function GetNewAwake()
     AwakeText = ''
     pcall(function()
@@ -403,6 +388,21 @@ function CheckLevel()
         RaceText = 'Lv.MAX | '
     end
     return RaceText
+end
+
+function AbbreviateNumber(number)
+    local suffixes = {"", "K", "M", "B", "T"}
+    local suffixIndex = 1
+
+    while number >= 1000 and suffixIndex < #suffixes do
+        number = number / 1000
+        suffixIndex = suffixIndex + 1
+    end
+
+    -- Format the number with two decimal places
+    local formattedNumber = string.format("%.2f", number)
+
+    return formattedNumber .. suffixes[suffixIndex]
 end
 
 function CheckBeli()
