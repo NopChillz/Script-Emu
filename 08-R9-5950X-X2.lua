@@ -1,4 +1,12 @@
 wait(5)
+-- Enabled Kaitun Scripts
+_G.KaitanMode = true
+-- Candy Event
+_G.CandyConfigs = {
+    ExpX2 = true,
+    Trade500Fragment = true,
+    Trade200Fragment = true
+}
 shared.Team = "Pirates"
 getgenv().Configs = {
     FpsBoost = true,
@@ -9,23 +17,23 @@ getgenv().Configs = {
     FastAttack = true,
     NewFastAttack = true,
     NoAttackAnimation = true,
-    
+
     StartKaitun = true,
     -- World 1
-    AutoPole = true, -- จะตีเเค่ถ้ามันเกิดไม่ได้ตีจนกว่าจะได้
-    AutoSaber = false,
-    
+    AutoPole = false, -- จะตีเเค่ถ้ามันเกิดไม่ได้ตีจนกว่าจะได้
+    AutoSaber = true,
+
     AutoSecondSea = true,
     -- World 2
     AutoRengoku = true,
     AutoQuestFlower = true,
-    AutoRaceV3 = false,
+    AutoRaceV3 = true,
     AutoBartiloQuest = true,
     AutoCursedCaptain = true,
     AutoDarkbeard = true,
     AutoFactory = true,
     AutoThirdSea = true,
-    SkipGetItemGuitar = true, -- จะไม่ หาของทำ soul guiter ในโลก 2 เบบ หาจนกว่าจะได้ will not find item until get all item for do soul guiter ( open recommend เเนะนำให้เปิด )
+    SkipGetItemGuitar = false, -- จะไม่ หาของทำ soul guiter ในโลก 2 เบบ หาจนกว่าจะได้ will not find item until get all item for do soul guiter ( open recommend เเนะนำให้เปิด )
     AlliesFruit = {"Dough-Dough","Leopard-Leopard","Kitsune-Kitsune"}, -- จะไม่ใช้ผลพวกนี้ในการเปิดประตูไปโลก3
     -- World 3
     AutoHallowScythe = true,
@@ -40,16 +48,16 @@ getgenv().Configs = {
     AutoSoulGuitar = true, 
     AutoRainbowHaki = true,
     AutoCursedDualKatana = true,
-    
+
     -- Fighting Style 
-    
+
     AutoGodHuman = true,
     AutoSuperhuman = true,
     AutoDeathStep = true,
     AutoSharkmanKarate = true,
     AutoElectricClaw = true,
     AutoDargonTalon = true,
-    
+
     AutoDFMastery = true,
     SettingsSkill = { -- ถ้าไม่ใส่จะใช้ mode auto
         -- ["Z"] = 0.1,
@@ -59,23 +67,23 @@ getgenv().Configs = {
     },
     AutoSwordMastery = true,
     SelectRaritySword = {"Mythical","Legendary"}, -- Common , Uncommon,Rare,Legendary,Mythical
-    
+
     SelectRedeemCodeLevel = 1,
-    
+
     -- Raids
-    
-    SelectRateFruitRaid = 1000000, -- if fruit price less u rate then we use it to auto raids
-    LimitFragmentsRaids = 200000,
-    
+
+    SelectRateFruitRaid = 880000, -- if fruit price less u rate then we use it to auto raids
+    LimitFragmentsRaids = 500000,
+
     -- Devil Fruit
-        
-    SelectMainDF = {}, -- ผลหลักที่จะกินเเทนผลรอง
+
+    SelectMainDF = {""}, -- ผลหลักที่จะกินเเทนผลรอง
     SelectSubDF = {"Dark-Dark","Human-Human: Buddha","Light-Light","Dragon-Dragon","Mammoth-Mammoth","Dough-Dough","Leopard-Leopard","Kitsune-Kitsune"}, -- ผลรองจะกินไว้ก่อนเเล้วพอผลหลักมีก้จะเปลียนไปกินผิดหลัก
-    AllowEatDFInventory = true,
+    AllowEatDFInventory = false,
     StartSniper = true,
-    
+
     -- CPU
-    
+
     LockFPS = 15,
     LockFPSNow = true,
     WhiteScreen = true
