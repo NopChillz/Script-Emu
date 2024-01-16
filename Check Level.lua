@@ -5,7 +5,7 @@ local module = loadstring(game:HttpGet("https://raw.githubusercontent.com/LeoKho
 function FixNotFarm()
 	while true do
 		local fuckoldlevel = game:GetService("Players").LocalPlayer.Data.Level.Value
-		wait(420)
+		wait(600)
 		local currentlevelshit = game:GetService("Players").LocalPlayer.Data.Level.Value
 		if currentlevelshit == 2550 and fuckoldlevel == 2550 then
 			print("-------------------------------")
@@ -27,7 +27,7 @@ function CheckCFrameNotFarm()
 		local plr = game.Players.LocalPlayer 
 
 		local oldCFrame = plr.Character.HumanoidRootPart.CFrame.Position
-		wait(600)
+		wait(900)
 		local currentCFrame = plr.Character.HumanoidRootPart.CFrame.Position
 
 		if currentCFrame ~= oldCFrame then
