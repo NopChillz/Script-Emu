@@ -9,7 +9,7 @@ function FixNotFarm()
 		local currentlevelshit = game:GetService("Players").LocalPlayer.Data.Level.Value
 		if currentlevelshit == 2550 and fuckoldlevel == 2550 then
 			print("-------------------------------")
-			print("[Loop Every 7 Minutes] !!")
+			print("[Loop Every 10 Minutes] !!")
 			print("* Lv.Max | No Hop *")
 			print("-------------------------------")
 		elseif currentlevelshit == fuckoldlevel then
