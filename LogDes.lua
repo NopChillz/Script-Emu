@@ -293,7 +293,7 @@ function GetGOD()
         GodHuman = tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman",true))
         if GodHuman then
             if GodHuman == 1 then
-                CombatText = '+GOD'
+                CombatText = 'GOD'
             end
         end
     else
