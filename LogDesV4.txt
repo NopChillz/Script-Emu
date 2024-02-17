@@ -506,7 +506,7 @@ end
 task.spawn(function()
     while true do
 		pcall(function()
-            getgenv().SetDescription(GetGod().. "\n" ..CheckMirrorFractalNew().. "\n" ..CheckVK().. "\n" ..CheckCDKNew().. "\n" .."Race : " .. game:GetService("Players").LocalPlayer.Data.Race.Value.. "\n" ..CheckRaceV() .. "\n" .. CheckTier() .. "\n" .. CheckPull_Lever_NopChillz() .. "\n" .. CheckSGTNew())
+            getgenv().SetDescription(GetGod().."\n"..CheckMirrorFractalNew().."\n"..CheckVK().."\n"..CheckCDKNew().."\n".."Race : "..game:GetService("Players").LocalPlayer.Data.Race.Value.."\n"..CheckRaceV().."\n"..CheckTier().."\n"..CheckPull_Lever_NopChillz().."\n"..CheckSGTNew())
         end);
         if getgenv().Settings.Delay_Settings.Enabled == true then
             wait(getgenv().Settings.Delay_Settings.CheckingDelay)
