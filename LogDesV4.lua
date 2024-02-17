@@ -487,35 +487,35 @@ local function CheckRaceV()
 end
 
 local function CheckPull_Lever_NopChillz()
-	Pull_Lever_NopChillz_Text = '❌'
-	local args = {
-		[1] = "CheckTempleDoor"
-	}
-	local Pull_Lever_NopChillz = game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))	
+    Pull_Lever_NopChillz_Text = '❌'
+    local args = {
+        [1] = "CheckTempleDoor"
+    }
+    local Pull_Lever_NopChillz = game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))	
 
-	-- เช็คเงื่อนไข
-	if Pull_Lever_NopChillz then
-		print("✔")
-	else
-		print("❌")
-	end
-
-	-- แสดงผลลัพธ์ว่าจริงหรือเท็จ
-	local Pull_Lever_NopChillz_Text = 'Pull Leaver : ' .. (Pull_Lever_NopChillz and "✔️" or "❌")
+    -- เช็คเงื่อนไข
+    if Pull_Lever_NopChillz then
+        print("✔")  -- แสดง "✔" ในคอนโซล เพื่อบ่งชี้ว่า Pull Lever NopChillz ทำงานอย่างถูกต้อง
+        Pull_Lever_NopChillz_Text = 'Pull Leaver : ✔️'  -- กำหนดค่าของ Pull_Lever_NopChillz_Text เป็น "Pull Leaver : ✔️" เมื่อ Pull Lever NopChillz ทำงานอย่างถูกต้อง
+    else
+        print("❌")  -- แสดง "❌" ในคอนโซล เพื่อบ่งชี้ว่า Pull Lever NopChillz ไม่ทำงานหรือมีข้อผิดพลาด
+        Pull_Lever_NopChillz_Text = 'Pull Leaver : ❌'  -- กำหนดค่าของ Pull_Lever_NopChillz_Text เป็น "Pull Leaver : ❌" เมื่อมีข้อผิดพลาดหรือ Pull Lever NopChillz ไม่ทำงาน
+    end
 
     return Pull_Lever_NopChillz_Text
 end
+
 
 local function CheckTier()
     CheckTier_Text = "None"
 	local gear = game:GetService("Players").LocalPlayer.Data.Race:FindFirstChild("Gears")
     if gear then 
         print(gear.Value)
+        CheckTier_Text = "Tier : " ..gear.Value..
     else
         print(false)
+        CheckTier_Text = "Tier : None"
     end
-
-    local CheckTier_Text = 'Tier : ' ..(gear and gear.Value or "None")
 
     return CheckTier_Text
 end
