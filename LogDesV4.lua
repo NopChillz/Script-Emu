@@ -494,10 +494,10 @@ local function CheckPull_Lever_NopChillz()
 
 
     if Pull_Lever_NopChillz then
-        print("✔") 
+        print("✔")
         Pull_Lever_NopChillz_Text = 'Pull Leaver : ✔️'
     else
-        print("❌") 
+        print("❌")
         Pull_Lever_NopChillz_Text = 'Pull Leaver : ❌'
     end
 
@@ -507,7 +507,7 @@ end
 
 local function CheckTier()
 	local gear = game:GetService("Players").LocalPlayer.Data.Race:FindFirstChild("Gears")
-    if gear then 
+    if gear then
         print(gear.Value)
         CheckTier_Text = "Tier : " ..gear.Value
     else
