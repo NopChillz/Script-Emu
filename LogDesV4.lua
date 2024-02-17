@@ -336,7 +336,7 @@ end
 
 function CheckMirrorFractalNew()
     if getgenv().Settings.Show_Material_Settings["Mirror_Fractal"] == true then
-        MirrorFac_Text = 'Mirror Fractal : ❌'
+        MirrorFac_Text = ''
         for i,v in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventory")) do
             if type(v) == "table" then
                 if v.Type == "Material" then
@@ -347,7 +347,7 @@ function CheckMirrorFractalNew()
             end
         end
 	else
-        MirrorFac_Text = ''
+        MirrorFac_Text = 'Mirror Fractal : ❌'
     end
     return MirrorFac_Text
 end
@@ -410,19 +410,19 @@ end
 
 local function CheckSGTNew()
     if getgenv().Settings.Show_Item_Settings["Soul_Guitar"] == true then
-        SGT_Text = 'Soul Guitar : ❌'
+        SGT_Text = 'SG : ❌'
         for i,v in pairs(game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("getInventoryWeapons")) do -- เช็คในกระเป๋า
             for i1,v1 in pairs(v) do
-                if v1 == 'Soul Guitar : ✔️' then
-                    SGT_Text = 'Soul Guitar : ✔️'
+                if v1 == 'Soul Guitar' then
+                    SGT_Text = 'SG : ✔️'
                 end
                 if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild('Soul Guitar') or game:GetService("Players").LocalPlayer.Character:FindFirstChild('Soul Guitar') then
-                    SGT_Text = 'Soul Guitar'
+                    SGT_Text = 'SG : ✔️'
                 end
             end
         end
     else
-        SGT_Text = 'Soul Guitar : ❌'
+        SGT_Text = 'SG : ❌'
     end
     return SGT_Text
 end
@@ -477,10 +477,37 @@ local function CheckRaceV()
 	return ReturnText
 end
 
+local function CheckTier()
+	local TierValue = game:GetService("Players").LocalPlayer.Data.Race.Gears.Value
+    local TierText = 'Tier : ' .. AbbreviateNumber(TierValue)
+    return TierText
+end
+
+local function CheckPull_Lever_NopChillz()
+	
+	local args = {
+		[1] = "CheckTempleDoor"
+	}
+	local Pull_Lever_NopChillz = game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))	
+
+	-- เช็คเงื่อนไข
+	if Pull_Lever_NopChillz then
+		print("✔")
+	else
+		print("❌")
+	end
+
+	-- แสดงผลลัพธ์ว่าจริงหรือเท็จ
+	local Pull_Lever_NopChillz_Text = 'Pull Leaver : ' .. (Pull_Lever_NopChillz and "✔️" or "❌") .. " | "
+
+    return Pull_Lever_NopChillz_Text
+end
+
 task.spawn(function()
     while true do
 		pcall(function()
-            getgenv().SetDescription(GetGOD().."\n"..CheckMirrorFractalNew().."\n"..CheckVK().."\n"..CheckCDKNew().."\n"..CheckSGTNew())
+            getgenv().SetDescription(GetGod().. "\n" .. CheckMirrorFractalNew().. "\n" .. CheckVK().. "\n" .. CheckCDKNew().. "\n" .. " Race : " .. game:GetService("Players").LocalPlayer.Data.Race.Value .. "\n" .. CheckRaceV().. "\n" .. CheckTier().. "\n" .. CheckPull_Lever_NopChillz().. "\n" .. CheckSGTNew())
+
         end);
         if getgenv().Settings.Delay_Settings.Enabled == true then
             wait(getgenv().Settings.Delay_Settings.CheckingDelay)
