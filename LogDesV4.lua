@@ -487,7 +487,7 @@ local function CheckRaceV()
 end
 
 local function CheckPull_Lever_NopChillz()
-	
+	Pull_Lever_NopChillz_Text = '❌'
 	local args = {
 		[1] = "CheckTempleDoor"
 	}
@@ -501,12 +501,13 @@ local function CheckPull_Lever_NopChillz()
 	end
 
 	-- แสดงผลลัพธ์ว่าจริงหรือเท็จ
-	local Pull_Lever_NopChillz_Text = 'Pull Leaver : ' .. (Pull_Lever_NopChillz and "✔️" or "❌") .. " | "
+	local Pull_Lever_NopChillz_Text = 'Pull Leaver : ' .. (Pull_Lever_NopChillz and "✔️" or "❌")
 
     return Pull_Lever_NopChillz_Text
 end
 
 local function CheckTier()
+    CheckTier_Text = "None"
 	local gear = game:GetService("Players").LocalPlayer.Data.Race:FindFirstChild("Gears")
     if gear then 
         print(gear.Value)
@@ -515,9 +516,9 @@ local function CheckTier()
     end
 
     local CheckTier_Text = 'Tier : ' ..(gear and gear.Value or "None")
+
     return CheckTier_Text
 end
-
 
 task.spawn(function()
     while true do
