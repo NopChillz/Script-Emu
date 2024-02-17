@@ -73,6 +73,15 @@ end
 local json_encode = function(data)
     return game:GetService("HttpService"):JSONEncode(data)
 end
+getgenv().SetAlias=function(Alias)
+    local SetAlias = requests({
+        Url = host.."/SetAlias?Account="..getgenv().Local(2),
+        Method = "POST",
+        Body = Alias,
+    })
+    print("Changed Alias to : "..Alias)
+    return SetAlias
+end
 
 getgenv().SetDescription=function(Description)
     local SetDescription = requests({
@@ -284,11 +293,11 @@ function GetGOD()
         GodHuman = tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman",true))
         if GodHuman then
             if GodHuman == 1 then
-                CombatText = 'GOD : ✔️'
+                CombatText = '+GOD'
             end
         end
     else
-        CombatText = 'GOD : ❌'
+        CombatText = ''
     end
     return CombatText
 end
@@ -336,12 +345,12 @@ end
 
 function CheckMirrorFractalNew()
     if getgenv().Settings.Show_Material_Settings["Mirror_Fractal"] == true then
-        MirrorFac_Text = 'Mirror Fractal : ❌'
+        MirrorFac_Text = ''
         for i,v in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventory")) do
             if type(v) == "table" then
                 if v.Type == "Material" then
                     if v.Name == "Mirror Fractal" then
-                        MirrorFac_Text = "Mirror Fractal : ✔️"
+                        MirrorFac_Text = "+MIRROR"
                     end
                 end
             end
@@ -410,57 +419,57 @@ end
 
 local function CheckSGTNew()
     if getgenv().Settings.Show_Item_Settings["Soul_Guitar"] == true then
-        SGT_Text = 'Soul Guitar : ❌'
+        SGT_Text = ''
         for i,v in pairs(game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("getInventoryWeapons")) do -- เช็คในกระเป๋า
             for i1,v1 in pairs(v) do
-                if v1 == 'Soul Guitar : ✔️' then
-                    SGT_Text = 'Soul Guitar : ✔️'
+                if v1 == 'Soul Guitar' then
+                    SGT_Text = '+SG'
                 end
                 if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild('Soul Guitar') or game:GetService("Players").LocalPlayer.Character:FindFirstChild('Soul Guitar') then
-                    SGT_Text = 'Soul Guitar'
+                    SGT_Text = '+SG'
                 end
             end
         end
     else
-        SGT_Text = 'Soul Guitar : ❌'
+        SGT_Text = ''
     end
     return SGT_Text
 end
 
 local function CheckCDKNew()
     if getgenv().Settings.Show_Item_Settings["Cursed_Dual_Katana"] == true then
-        CDK_Text = 'CDK : ❌'
+        CDK_Text = ''
         for i,v in pairs(game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("getInventoryWeapons")) do -- เช็คในกระเป๋า
             for i1,v1 in pairs(v) do
                 if v1 == 'Cursed Dual Katana' then
-                    CDK_Text = 'CDK : ✔️'
+                    CDK_Text = '+CDK'
                 end
             end
         end
         if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild('Cursed Dual Katana') or game:GetService("Players").LocalPlayer.Character:FindFirstChild('Cursed Dual Katana') then
-            CDK_Text = 'CDK : ✔️'
+            CDK_Text = '+CDK'
         end
     else
-        CDK_Text = 'CDK : ❌'
+        CDK_Text = ''
     end
     return CDK_Text
 end
 
 local function CheckVK()
     if getgenv().Settings.Show_Item_Settings["Valkyrie_Helm"] == true then
-        VK_Text = 'ADMIN : ❌'
+        VK_Text = ''
         for i,v in pairs(game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("getInventoryWeapons")) do -- เช็คในกระเป๋า
             for i1,v1 in pairs(v) do
                 if v1 == 'Valkyrie Helm' then
-                    VK_Text = 'ADMIN : ✔️'
+                    VK_Text = '+ADMIN'
                 end
             end
         end
         if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild('Valkyrie Helm') or game:GetService("Players").LocalPlayer.Character:FindFirstChild('Valkyrie Helm') then
-            VK_Text = 'ADMIN : ✔️'
+            VK_Text = '+ADMIN'
         end
     else
-        VK_Text = 'ADMIN : ❌'
+        VK_Text = ''
     end
     return VK_Text
 end
@@ -480,7 +489,8 @@ end
 task.spawn(function()
     while true do
 		pcall(function()
-            getgenv().SetDescription(GetGOD().."\n"..CheckMirrorFractalNew().."\n"..CheckVK().."\n"..CheckCDKNew().."\n"..CheckSGTNew())
+            getgenv().SetDescription(CheckLevel()..GetNewAwake()..CheckBeli()..CheckFragment().. " | Race : " ..game:GetService("Players").LocalPlayer.Data.Race.Value.." ["..CheckRaceV().."] | ".." Melee : "..GetAllMeleeNew().." | World : "..WorldText..' | Fruits : '..GetFruitInU())
+			getgenv().SetAlias(GetGOD()..CheckMirrorFractalNew()..CheckVK()..CheckCDKNew()..CheckSGTNew())
         end);
         if getgenv().Settings.Delay_Settings.Enabled == true then
             wait(getgenv().Settings.Delay_Settings.CheckingDelay)
