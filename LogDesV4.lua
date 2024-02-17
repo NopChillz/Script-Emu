@@ -501,7 +501,7 @@ local function CheckPull_Lever_NopChillz()
 	end
 
 	-- แสดงผลลัพธ์ว่าจริงหรือเท็จ
-	local Pull_Lever_NopChillz_Text = 'Pull Leaver : ' .. (Pull_Lever_NopChillz and "✔️" or "❌") .. " | "
+	local Pull_Lever_NopChillz_Text = 'Pull Leaver : ' .. (Pull_Lever_NopChillz and "✔️" or "❌")()
 
     return Pull_Lever_NopChillz_Text
 end
