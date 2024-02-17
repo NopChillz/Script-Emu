@@ -506,10 +506,10 @@ end
 
 
 local function CheckTier()
-	local gear = game:GetService("Players").LocalPlayer.Data.Race:FindFirstChild("Gears")
-    if gear then
-        print(gear.Value)
-        CheckTier_Text = "Tier : " ..gear.Value
+	local Tier = game:GetService("Players").LocalPlayer.Data.Race:FindFirstChild("C")
+    if Tier then
+        print(Tier.Value)
+        CheckTier_Text = "Tier : " ..Tier.Value
     else
         print(false)
         CheckTier_Text = "Tier : None"
@@ -517,6 +517,7 @@ local function CheckTier()
 
     return CheckTier_Text
 end
+CheckTier()
 
 task.spawn(function()
     while true do
