@@ -486,7 +486,7 @@ local function CheckRaceV()
 	return ReturnText
 end
 
-ocal function CheckPull_Lever_NopChillz()
+local function CheckPull_Lever_NopChillz()
 	
 	local args = {
 		[1] = "CheckTempleDoor"
