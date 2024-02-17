@@ -42,22 +42,22 @@ repeat wait()
 until game.Players.LocalPlayer.Team ~= nil
 
 local function Connect()
-    print('[ NopChillz Service V4 ] (Connect) : [1 / 5] : ✅')
+    print('[ NopChillz Service ] (Connect) : [1 / 5] : ✅')
     wait(0.5)
-    print('[ NopChillz Service V4 ] (Connect) : [2 / 5] : ✅')
+    print('[ NopChillz Service ] (Connect) : [2 / 5] : ✅')
     wait(0.5)
-    print('[ NopChillz Service V4 ] (Connect) : [3 / 5] : ✅')
+    print('[ NopChillz Service ] (Connect) : [3 / 5] : ✅')
     wait(0.5)
-    print('[ NopChillz Service V4 ] (Connect) : [4 / 5] : ✅')
+    print('[ NopChillz Service ] (Connect) : [4 / 5] : ✅')
     wait(0.5)
-    print('[ NopChillz Service V4 ] (Connect) : [5 / 5] : ✅')
+    print('[ NopChillz Service ] (Connect) : [5 / 5] : ✅')
     wait(0.5)
     Nexus_Version = 104
     loadstring(game:HttpGet"https://raw.githubusercontent.com/ic3w0lf22/Roblox-Account-Manager/master/RBX%20Alt%20Manager/Nexus/Nexus.lua")()
     task.spawn(function()
         Nexus:Connect()
     end)
-    warn('[ NopChillz Service V4 ] : Success executed script!')
+    warn('[ NopChillz Service ] : Success executed script!')
 end;
 
 Connect() -- Load script
@@ -489,7 +489,7 @@ end
 task.spawn(function()
     while true do
 		pcall(function()
-            getgenv().SetDescription(GetGOD().."\n"..CheckMirrorFractalNew().."\n"..CheckVK().."\n"..CheckCDKNew())
+            getgenv().SetDescription("Race : "..game:GetService("Players").LocalPlayer.Data.Race.Value.."\n V : "..CheckRaceV().."\n"..GetGOD().."\n"..CheckMirrorFractalNew().."\n"..CheckVK().."\n"..CheckCDKNew())
         end);
         if getgenv().Settings.Delay_Settings.Enabled == true then
             wait(getgenv().Settings.Delay_Settings.CheckingDelay)
