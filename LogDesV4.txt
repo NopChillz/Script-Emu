@@ -73,15 +73,6 @@ end
 local json_encode = function(data)
     return game:GetService("HttpService"):JSONEncode(data)
 end
-getgenv().SetAlias=function(Alias)
-    local SetAlias = requests({
-        Url = host.."/SetAlias?Account="..getgenv().Local(2),
-        Method = "POST",
-        Body = Alias,
-    })
-    print("Changed Alias to : "..Alias)
-    return SetAlias
-end
 
 getgenv().SetDescription=function(Description)
     local SetDescription = requests({
@@ -516,7 +507,6 @@ task.spawn(function()
     while true do
 		pcall(function()
             getgenv().SetDescription(GetGod .. "\n" .. CheckMirrorFractalNew .. "\n" .. CheckVK .. "\n" .. CheckCDKNew .. "\n" .. " Race : " .. game:GetService("Players").LocalPlayer.Data.Race.Value .. "\n" .. CheckRaceV .. "\n" .. CheckTier .. "\n" .. CheckPull_Lever_NopChillz .. "\n" .. CheckSGTNew)
-			getgenv().SetAlias()
 
         end);
         if getgenv().Settings.Delay_Settings.Enabled == true then
