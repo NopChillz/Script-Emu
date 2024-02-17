@@ -487,7 +487,6 @@ local function CheckRaceV()
 end
 
 local function CheckPull_Lever_NopChillz()
-    Pull_Lever_NopChillz_Text = '❌'
     local args = {
         [1] = "CheckTempleDoor"
     }
@@ -507,7 +506,6 @@ end
 
 
 local function CheckTier()
-    CheckTier_Text = "None"
 	local gear = game:GetService("Players").LocalPlayer.Data.Race:FindFirstChild("Gears")
     if gear then 
         print(gear.Value)
