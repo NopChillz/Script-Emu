@@ -492,13 +492,13 @@ local function CheckPull_Lever_NopChillz()
     }
     local Pull_Lever_NopChillz = game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))	
 
-    -- เช็คเงื่อนไข
+
     if Pull_Lever_NopChillz then
-        print("✔")  -- แสดง "✔" ในคอนโซล เพื่อบ่งชี้ว่า Pull Lever NopChillz ทำงานอย่างถูกต้อง
-        Pull_Lever_NopChillz_Text = 'Pull Leaver : ✔️'  -- กำหนดค่าของ Pull_Lever_NopChillz_Text เป็น "Pull Leaver : ✔️" เมื่อ Pull Lever NopChillz ทำงานอย่างถูกต้อง
+        print("✔") 
+        Pull_Lever_NopChillz_Text = 'Pull Leaver : ✔️'
     else
-        print("❌")  -- แสดง "❌" ในคอนโซล เพื่อบ่งชี้ว่า Pull Lever NopChillz ไม่ทำงานหรือมีข้อผิดพลาด
-        Pull_Lever_NopChillz_Text = 'Pull Leaver : ❌'  -- กำหนดค่าของ Pull_Lever_NopChillz_Text เป็น "Pull Leaver : ❌" เมื่อมีข้อผิดพลาดหรือ Pull Lever NopChillz ไม่ทำงาน
+        print("❌") 
+        Pull_Lever_NopChillz_Text = 'Pull Leaver : ❌'
     end
 
     return Pull_Lever_NopChillz_Text
@@ -509,7 +509,7 @@ local function CheckTier()
 	local gear = game:GetService("Players").LocalPlayer.Data.Race:FindFirstChild("Gears")
     if gear then 
         print(gear.Value)
-        CheckTier_Text = "Tier : " ..gear.Value..
+        CheckTier_Text = "Tier : " ..gear.Value
     else
         print(false)
         CheckTier_Text = "Tier : None"
