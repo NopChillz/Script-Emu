@@ -486,7 +486,7 @@ local function CheckRaceV()
 	return ReturnText
 end
 
-local function CheckPull_Lever_NopChillz()
+/**local function CheckPull_Lever_NopChillz()
 	
 	local args = {
 		[1] = "CheckTempleDoor"
@@ -504,7 +504,7 @@ local function CheckPull_Lever_NopChillz()
 	local Pull_Lever_NopChillz_Text = 'Pull Leaver : ' .. (Pull_Lever_NopChillz and "✔️" or "❌")()
 
     return Pull_Lever_NopChillz_Text
-end
+end **/
 
 task.spawn(function()
     while true do
