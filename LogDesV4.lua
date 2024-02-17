@@ -486,30 +486,10 @@ local function CheckRaceV()
 	return ReturnText
 end
 
-/**local function CheckPull_Lever_NopChillz()
-	
-	local args = {
-		[1] = "CheckTempleDoor"
-	}
-	local Pull_Lever_NopChillz = game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))	
-
-	-- เช็คเงื่อนไข
-	if Pull_Lever_NopChillz then
-		print("✔")
-	else
-		print("❌")
-	end
-
-	-- แสดงผลลัพธ์ว่าจริงหรือเท็จ
-	local Pull_Lever_NopChillz_Text = 'Pull Leaver : ' .. (Pull_Lever_NopChillz and "✔️" or "❌")()
-
-    return Pull_Lever_NopChillz_Text
-end **/
-
 task.spawn(function()
     while true do
 		pcall(function()
-            getgenv().SetDescription("Race : "..game:GetService("Players").LocalPlayer.Data.Race.Value.."\nV : "..CheckRaceV().."\n"..CheckMirrorFractalNew().."\n"..CheckVK().."\n"..GetGOD().."\n"..CheckCDKNew())
+            getgenv().SetDescription("Race : "..game:GetService("Players").LocalPlayer.Data.Race.Value.."\nV : "..CheckRaceV().."\n"..CheckMirrorFractalNew().."\n"..CheckVK().."\n".."\n"..GetGOD().."\n"..CheckCDKNew())
         end);
         if getgenv().Settings.Delay_Settings.Enabled == true then
             wait(getgenv().Settings.Delay_Settings.CheckingDelay)
