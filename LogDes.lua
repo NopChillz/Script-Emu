@@ -366,7 +366,7 @@ function GetFruitInU()
     for i,v in pairs(game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("getInventoryFruits")) do
         if type(v) == "table" then
             if v ~= nil then
-                if v.Price >= 1000000 then
+                if v.Price >= 0 then
                     table.insert(ReturnText,string.split(v.Name,"-")[2])
                 end
             end
