@@ -1,4 +1,3 @@
-wait(5)
 _G.KAITUN_KL_MODE = true
 _G.Settings_Farm = {
     [Start_Farm] = true,
