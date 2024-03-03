@@ -37,7 +37,7 @@ _G.Nexus = {
     },
     Efficiency = {
         ['FPS Booster'] = true,
-        ['Black Screen'] = true,
+        ['Black Screen'] = false,
     },
     Fruits = {
         ['Enabled'] = false,
