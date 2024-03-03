@@ -21,8 +21,8 @@ _G.Setting = {
         ['Gun'] = true
     },
     ['Farm Fruit'] = {
-        ['Select Main Fruit'] = {'Dough-Dough','Leopard-Leopard'}, -- ผลหลัก 
-        ['Select Fruit'] = {'Dark-Dark','Human-Human: Buddha','Light-Light','Dragon-Dragon','Mammoth-Mammoth','Kitsune-Kitsune'}, -- ผลรอง
+        ['Select Main Fruit'] = {'Dough-Dough'}, -- ผลหลัก 
+        ['Select Fruit'] = {'Dark-Dark','Human-Human: Buddha','Light-Light','Dragon-Dragon','Mammoth-Mammoth','Kitsune-Kitsune','Leopard-Leopard'}, -- ผลรอง
         ['Auto Awaken'] = true -- ทำผลตื่นออโต้ 🍎
     },
     ['Farm Quest'] = { 
