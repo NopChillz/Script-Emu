@@ -37,5 +37,5 @@ _G.Setting = {
 }
 
 _G.Switch_Hub_No_1 = true -- เปิดใช้งานSwitch Hub 
-script_key = "dQmSjpUTZgTncNrPNZnKrDoubGOPDDAp"
+script_key = "iPwPzcaBsTNhRUDZAyCeEyOYedzbYkuB"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/londnee/code/main/sw.kaitun.lua"))()
