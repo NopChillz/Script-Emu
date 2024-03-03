@@ -63,7 +63,7 @@ end;
 Connect() -- Load script
 
 --
-local requests = (syn and syn.request) or (krnl and request) or (fluxus and fluxus.request) or (electron and http.request) or request or http.request
+local requests = (syn and syn.request) or (krnl and request) or (fluxus and fluxus.request) or (trigon and trigon.request) or (electron and http.request) or request or http.request
 local host = "http://localhost:7963"
 local Port = "7963"
 getgenv().Local=function(data)
