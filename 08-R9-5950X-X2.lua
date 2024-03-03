@@ -40,7 +40,7 @@ _G.Nexus = {
         ['Black Screen'] = true,
     },
     Fruits = {
-        ['Enabled'] = false,
+        ['Enabled'] = true,
         ['Awakening Fruit'] = true,
         ['Main'] = {
             'Dough-Dough',
