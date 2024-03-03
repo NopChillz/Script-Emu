@@ -1,22 +1,41 @@
-if not game:IsLoaded() then repeat game.Loaded:Wait(5) until game:IsLoaded() end
+_G.Setting = {
+    ['FPS Booster'] = true, -- ภาพ144p ช่วยลดCPU+RAM
+    ['White Screen'] = true, -- จอขาว ช่วยลดCPU+RAM
+    ['Auto Rejoin'] = true, -- รีจอย
+    ['Roblox Account Manager'] = {
+        ['Enabled'] = false,
+        ['Delay'] = 300
+    },
 
-_G.Delay_Upload = 300 -- โชว์ข้อมูลใหม่ทุกๆ 300วิ
-_G.Bypass_Tp = true -- วาปฟาร์ม
+    ['Farm Item'] = {
+        ['Godhuman'] = true, -- 👊
+        ['Cursed Dual Katana'] = true, -- ⚔️
+        ['Hallow Scythe'] = true, -- 🔪
+        ['Valkyrie Helm'] = true, -- 👑
+        ['Mirror Fractal'] = true -- 🧩
+    },
+    ['Farm Mastery'] = { -- ฟาร์มมาสเตอรี่
+        ['Melee'] = true,
+        ['Sword'] = true,
+        ['Devil Fruit'] = true,
+        ['Gun'] = true
+    },
+    ['Farm Fruit'] = {
+        ['Select Main Fruit'] = {'Dough-Dough','Leopard-Leopard'}, -- ผลหลัก 
+        ['Select Fruit'] = {'Dark-Dark','Human-Human: Buddha','Light-Light','Dragon-Dragon','Mammoth-Mammoth','Kitsune-Kitsune'}, -- ผลรอง
+        ['Auto Awaken'] = true -- ทำผลตื่นออโต้ 🍎
+    },
+    ['Farm Quest'] = { 
+        ['Quest Dough Awaken'] = true -- ทำโมจิตื่น 🍩
+    },
 
-_G.Select_Fruit = {
-    ['Main'] = {'Kitsune-Kitsune'}, -- เลือกผลปีศาจหลัก
-    ['Select Fruit'] = {''} -- เลือกผลปีศาจ
-}
-_G.Mastery_Farm = { -- ฟามมาสเตอรี่
-    ['Melee'] = true,
-    ['Devil Fruit'] = true,
-    ['Sword'] = true,
-    ['Gun'] = false
-}
-_G.Race_Evo = {
-    ['Level'] = {1,2,3}, -- อีโวเผ่าจากขั้น0 ไปถึงขั้น3
-    ['Enabled'] = true
+    ['Mode'] = {
+        ['Bypass Tp'] = true, -- วาปฟาร์ม
+        ['Faster Farm'] = true, -- เควสลับเพิ่มความเร็วในการฟาร์ม โอกาศติด 100%
+        ['Triple Quest'] = true --รับเควส 3ระดับความเร็วการฟาร์ม Exp X3
+    }
 }
 
-script_key="oLGbEhySPSkocHIYClAQqVpzwoYfYoJo";
-loadstring(game:HttpGet("https://raw.githubusercontent.com/londnee/code/main/m.lua"))()
+_G.Switch_Hub_No_1 = true -- เปิดใช้งานSwitch Hub 
+script_key = "dQmSjpUTZgTncNrPNZnKrDoubGOPDDAp"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/londnee/code/main/sw.kaitun.lua"))()
