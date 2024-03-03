@@ -18,7 +18,7 @@ _G.Setting = {
         ['Melee'] = true,
         ['Sword'] = true,
         ['Devil Fruit'] = true,
-        ['Gun'] = true
+        ['Gun'] = false
     },
     ['Farm Fruit'] = {
         ['Select Main Fruit'] = {'Kitsune-Kitsune'}, -- ผลหลัก 
