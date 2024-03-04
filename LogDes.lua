@@ -1,14 +1,14 @@
-getgenv().Settings = {
-    Show_Item_Settings = {
-        Godhuman = true,  -- true or false
-        Soul_Guitar = false,  -- true or false
-		Valkyrie_Helm = true,
-        Cursed_Dual_Katana = true,
+getgenv().SettingsLog = {
+    Show_Item_SettingsLog = {
+        Log_Godhuman = true,  -- true or false
+        Log_Soul_Guitar = false,  -- true or false
+		Log_Valkyrie_Helm = true,
+        Log_Cursed_Dual_Katana = true,
     },
-    Show_Material_Settings = {
-        Mirror_Fractal = true,
+    Show_Material_SettingsLog = {
+        Log_Mirror_Fractal = true,
     },
-    Delay_Settings = {
+    DelayLog_SettingsLog = {
         Enabled = true, -- true or false
         CheckingDelay = 60,
     },
@@ -73,24 +73,24 @@ end
 local json_encode = function(data)
     return game:GetService("HttpService"):JSONEncode(data)
 end
-getgenv().SetAlias=function(Alias)
-    local SetAlias = requests({
+getgenv().SetLogAlias=function(Alias)
+    local SetLogAlias = requests({
         Url = host.."/SetAlias?Account="..getgenv().Local(2),
         Method = "POST",
         Body = Alias,
     })
     print("Changed Alias to : "..Alias)
-    return SetAlias
+    return SetLogAlias
 end
 
-getgenv().SetDescription=function(Description)
-    local SetDescription = requests({
+getgenv().SetLogDescription=function(Description)
+    local SetLogDescription = requests({
         Url = host.."/SetDescription?Account="..getgenv().Local(2),
         Method = "POST",
         Body = Description,
     })
     print("Changed Description to : "..Description)
-    return SetDescription
+    return SetLogDescription
 end
 
 spawn(function()
@@ -107,15 +107,15 @@ spawn(function()
 end)
 
 local SkillAwake = '❌'
-local WorldText = '1'
+local LogWorldText = '1'
 
 local placeId = game.PlaceId
 if placeId == 2753915549 then
-	WorldText = '1'
+	LogWorldText = '1'
 elseif placeId == 4442272183 then
-	WorldText = '2'
+	LogWorldText = '2'
 elseif placeId == 7449423635 then
-	WorldText = '3'
+	LogWorldText = '3'
 end
 
 local formatNumber = (function (n) n = tostring(n) return n:reverse():gsub("%d%d%d", "%1,"):reverse():gsub("^,", "") end) 
@@ -197,7 +197,7 @@ task.spawn(function()
     end
 end)
 
-local function GetNewAwake()
+local function GetLogNewAwake()
     AwakeText = ''
     pcall(function()
         for i ,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
@@ -288,11 +288,11 @@ local function GetNewAwake()
     return AwakeText
 end
 
-function GetGOD()
-    if getgenv().Settings.Show_Item_Settings["Godhuman"] == true then
-        GodHuman = tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman",true))
-        if GodHuman then
-            if GodHuman == 1 then
+function GetLogGOD()
+    if getgenv().SettingsLog.Show_Item_SettingsLog["Log_Godhuman"] == true then
+        Log_Godhuman = tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman",true))
+        if Log_Godhuman then
+            if Log_Godhuman == 1 then
                 CombatText = 'GOD'
             end
         end
@@ -302,7 +302,7 @@ function GetGOD()
     return CombatText
 end
 
-local function GetAllMeleeNew()
+local function GetLogAllMeleeNew()
     combat = 0
     BuyDragonTalon = tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon",true))
     if BuyDragonTalon then
@@ -334,17 +334,17 @@ local function GetAllMeleeNew()
             combat += 1
         end
     end
-    GodHuman = tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman",true))
-    if GodHuman then
-        if GodHuman == 1 then
+    Log_Godhuman = tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman",true))
+    if Log_Godhuman then
+        if Log_Godhuman == 1 then
             combat += 1
         end
     end
     return combat
 end
 
-function CheckMirrorFractalNew()
-    if getgenv().Settings.Show_Material_Settings["Mirror_Fractal"] == true then
+function CheckLogMirrorFractalNew()
+    if getgenv().SettingsLog.Show_Material_SettingsLog["Log_Mirror_Fractal"] == true then
         MirrorFac_Text = ''
         for i,v in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventory")) do
             if type(v) == "table" then
@@ -361,7 +361,7 @@ function CheckMirrorFractalNew()
     return MirrorFac_Text
 end
 
-function GetFruitInU()
+function GetLogFruitInU()
     local ReturnText = {}
     for i,v in pairs(game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("getInventoryFruits")) do
         if type(v) == "table" then
@@ -380,7 +380,7 @@ function GetFruitInU()
     end
 end
 
-function CheckLevel()
+function CheckLevelLog()
     RaceText = ''
     if game:GetService("Players").LocalPlayer.Data.Level.Value < 2550 then
         RaceText = 'Lv.'..game:GetService("Players").LocalPlayer.Data.Level.Value.." | "
@@ -405,20 +405,20 @@ function AbbreviateNumber(number)
     return formattedNumber .. suffixes[suffixIndex]
 end
 
-function CheckBeli()
+function CheckLogBeli()
     local BeliValue = game:GetService("Players").LocalPlayer.Data.Beli.Value
     local BeliText = 'Beli : ' .. AbbreviateNumber(BeliValue) .. " | "
     return BeliText
 end
 
-function CheckFragment()
+function CheckLogFragment()
     local FragmentValue = game:GetService("Players").LocalPlayer.Data.Fragments.Value
     local FragmentValue = 'Fragment : ' .. AbbreviateNumber(FragmentValue)
     return FragmentValue
 end
 
-local function CheckSGTNew()
-    if getgenv().Settings.Show_Item_Settings["Soul_Guitar"] == true then
+local function CheckLogSGTNew()
+    if getgenv().SettingsLog.Show_Item_SettingsLog["Log_Soul_Guitar"] == true then
         SGT_Text = ''
         for i,v in pairs(game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("getInventoryWeapons")) do -- เช็คในกระเป๋า
             for i1,v1 in pairs(v) do
@@ -436,8 +436,8 @@ local function CheckSGTNew()
     return SGT_Text
 end
 
-local function CheckCDKNew()
-    if getgenv().Settings.Show_Item_Settings["Cursed_Dual_Katana"] == true then
+local function CheckLogCDKNew()
+    if getgenv().SettingsLog.Show_Item_SettingsLog["Log_Cursed_Dual_Katana"] == true then
         CDK_Text = ''
         for i,v in pairs(game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("getInventoryWeapons")) do -- เช็คในกระเป๋า
             for i1,v1 in pairs(v) do
@@ -455,8 +455,8 @@ local function CheckCDKNew()
     return CDK_Text
 end
 
-local function CheckVK()
-    if getgenv().Settings.Show_Item_Settings["Valkyrie_Helm"] == true then
+local function CheckLogVK()
+    if getgenv().SettingsLog.Show_Item_SettingsLog["Log_Valkyrie_Helm"] == true then
         VK_Text = ''
         for i,v in pairs(game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("getInventoryWeapons")) do -- เช็คในกระเป๋า
             for i1,v1 in pairs(v) do
@@ -474,7 +474,7 @@ local function CheckVK()
     return VK_Text
 end
 
-local function CheckRaceV()
+local function CheckLogRaceV()
 	ReturnText = '1'
 	if game.Players.LocalPlayer.Backpack:FindFirstChild("Awakening") or game.Players.LocalPlayer.Character:FindFirstChild("Awakening") then
 		ReturnText = '4'
@@ -489,11 +489,11 @@ end
 task.spawn(function()
     while true do
 		pcall(function()
-            getgenv().SetDescription(CheckLevel()..GetNewAwake()..CheckBeli()..CheckFragment().. " | Race : " ..game:GetService("Players").LocalPlayer.Data.Race.Value.." ["..CheckRaceV().."] | ".." Melee : "..GetAllMeleeNew().." | World : "..WorldText..' | Fruits : '..GetFruitInU())
-			getgenv().SetAlias(GetGOD()..CheckMirrorFractalNew()..CheckVK()..CheckCDKNew()..CheckSGTNew())
+            getgenv().SetLogDescription(CheckLevelLog()..GetLogNewAwake()..CheckLogBeli()..CheckLogFragment().. " | Race : " ..game:GetService("Players").LocalPlayer.Data.Race.Value.." ["..CheckLogRaceV().."] | ".." Melee : "..GetLogAllMeleeNew().." | World : "..LogWorldText..' | Fruits : '..GetLogFruitInU())
+			getgenv().SetLogAlias(GetLogGOD()..CheckLogMirrorFractalNew()..CheckLogVK()..CheckLogCDKNew()..CheckLogSGTNew())
         end);
-        if getgenv().Settings.Delay_Settings.Enabled == true then
-            wait(getgenv().Settings.Delay_Settings.CheckingDelay)
+        if getgenv().SettingsLog.DelayLog_SettingsLog.Enabled == true then
+            wait(getgenv().SettingsLog.DelayLog_SettingsLog.CheckingDelay)
         else
             wait(1)
         end
@@ -504,7 +504,7 @@ Kick = false
 -- [Auto Rejoin]
 spawn(function()
 	while wait() do
-		if getgenv().Settings["AutoRejoin"] then
+		if getgenv().SettingsLog["AutoRejoin"] then
 			game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(child)
 				if child.Name == 'ErrorPrompt' and child:FindFirstChild('MessageArea') and child.MessageArea:FindFirstChild("ErrorFrame") and Kick == false then
                     print("Kicked!")
