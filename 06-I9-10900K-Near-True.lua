@@ -127,5 +127,5 @@ _G.Nexus = {
     }
 }
 
-script_key="fjRgtqtGSsUWTpOoHJPhVbmQwXlDzjQZ";
+script_key="aVTijXYvKvKtwqgbzMNosfpZLhfMCnwj";
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Xenon-Trash/Nexus/main/Nexus.lua"))()
