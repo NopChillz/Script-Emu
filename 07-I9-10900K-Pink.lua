@@ -98,7 +98,7 @@ _G.Nexus = {
             ['Cyborg'] = true,
         },
         V4 = {
-            ['Enabled'] = true,
+            ['Enabled'] = false,
         },
     },
     Mastery = {
