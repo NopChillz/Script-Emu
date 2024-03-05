@@ -44,6 +44,7 @@ _G.Nexus = {
         ['Awakening Fruit'] = true,
         ['Main'] = {
             'Dough-Dough',
+            'Kitsune-Kitsune',
         },
         ['List'] = {
             'Dark-Dark',
