@@ -40,8 +40,8 @@ _G.Nexus = {
         ['Black Screen'] = true,
     },
     Fruits = {
-        ['Enabled'] = true,
-        ['Awakening Fruit'] = true,
+        ['Enabled'] = false,
+        ['Awakening Fruit'] = false,
         ['Main'] = {
             'Dough-Dough',
             'Kitsune-Kitsune',
@@ -60,7 +60,7 @@ _G.Nexus = {
         },
     },
     Melee = {
-        ['6 Melee'] = true,
+        ['6 Melee'] = false,
     },
     Sword = {
         ['Shark Anchor'] = false,
@@ -72,10 +72,10 @@ _G.Nexus = {
     Race = {
         Enabled = false,
         Races = {
-            ['Mink'] = true,
+            ['Mink'] = false,
             ['Human'] = false,
-            ['Fishman'] = true,
-            ['Skypiea'] = true,
+            ['Fishman'] = false,
+            ['Skypiea'] = false,
         },
         Specials = {
             ['Ghoul'] = false,
@@ -87,7 +87,7 @@ _G.Nexus = {
     },
     Mastery = {
         Sword = {
-            ['Enabled'] = true,
+            ['Enabled'] = false,
             ['Manual'] = false,
             ['Sword Name'] = {
                 'Koko',
@@ -98,7 +98,7 @@ _G.Nexus = {
             }
         },
         Gun = {
-            ['Enabled'] = true,
+            ['Enabled'] = false,
             ['Manual'] = false,
             ['Gun Name'] = {
                 'Kabucha',
