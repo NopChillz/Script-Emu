@@ -440,21 +440,21 @@ end
 
 local function CheckLogSA()
     if getgenv().Settings.Show_Item_Settings["Log_Shark_Anchor"] == true then
-        SA_Text = ''
+        Log_SA_Text = ''
         for i,v in pairs(game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("getInventoryWeapons")) do -- เช็คในกระเป๋า
             for i1,v1 in pairs(v) do
                 if v1 == 'Shark Anchor' then
-                    SA_Text = 'Shark Anchor'
+                    Log_SA_Text = '+SA'
                 end
             end
         end
         if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild('Shark Anchor') or game:GetService("Players").LocalPlayer.Character:FindFirstChild('Shark Anchor') then
-            SA_Text = 'Shark Anchor'
+            Log_SA_Text = '+SA'
         end
     else
-        SA_Text = ''
+        Log_SA_Text = ''
     end
-    return SA_Text
+    return Log_SA_Text
 end
 
 local function CheckLogCDKNew()
@@ -511,7 +511,7 @@ task.spawn(function()
     while true do
 		pcall(function()
             getgenv().SetLogDescription(CheckLevelLog()..GetLogNewAwake()..CheckLogBeli()..CheckLogFragment().. " | Race : " ..game:GetService("Players").LocalPlayer.Data.Race.Value.." ["..CheckLogRaceV().."] | ".." Melee : "..GetLogAllMeleeNew().." | World : "..LogWorldText..' | Fruits : '..GetLogFruitInU())
-			getgenv().SetLogAlias(GetLogGOD()..CheckLogMirrorFractalNew()..CheckLogVK()..CheckLogCDKNew()..CheckLogSGTNew()..CheckLogSA())
+	    getgenv().SetLogAlias(GetLogGOD()..CheckLogMirrorFractalNew()..CheckLogVK()..CheckLogCDKNew()..CheckLogSGTNew()..CheckLogSA())
         end);
         if getgenv().SettingsLog.DelayLog_SettingsLog.Enabled == true then
             wait(getgenv().SettingsLog.DelayLog_SettingsLog.CheckingDelay)
