@@ -1,9 +1,11 @@
 getgenv().SettingsLog = {
     Show_Item_SettingsLog = {
         Log_Godhuman = true,  -- true or false
-        Log_Soul_Guitar = false,  -- true or false
-		Log_Valkyrie_Helm = true,
+        Log_Soul_Guitar = true,  -- true or false
+	Log_Valkyrie_Helm = true,
         Log_Cursed_Dual_Katana = true,
+	Log_Shark_Anchor = true,
+
     },
     Show_Material_SettingsLog = {
         Log_Mirror_Fractal = true,
@@ -437,7 +439,7 @@ local function CheckLogSGTNew()
 end
 
 local function CheckLogSA()
-    if getgenv().Settings.Show_Item_Settings["Shark_Anchor"] == true then
+    if getgenv().Settings.Show_Item_Settings["Log_Shark_Anchor"] == true then
         SA_Text = ''
         for i,v in pairs(game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("getInventoryWeapons")) do -- เช็คในกระเป๋า
             for i1,v1 in pairs(v) do
