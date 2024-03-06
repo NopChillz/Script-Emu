@@ -439,7 +439,7 @@ local function CheckLogSGTNew()
 end
 
 local function CheckLogSA()
-    if getgenv().Settings.Show_Item_Settings["Log_Shark_Anchor"] == true then
+    if getgenv().Settings.Show_Item_SettingsLog["Log_Shark_Anchor"] == true then
         Log_SA_Text = ''
         for i,v in pairs(game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("getInventoryWeapons")) do -- เช็คในกระเป๋า
             for i1,v1 in pairs(v) do
