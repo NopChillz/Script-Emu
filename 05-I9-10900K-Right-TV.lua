@@ -1,7 +1,7 @@
 _G.Nexus = {
     Main = {
         ['Enabled'] = true,
-        ['Hop Cooldown'] = 15, -- 30 Seconds
+        ['Hop Cooldown'] = 99999999999, -- 30 Seconds
         ['Quests'] = {
             ['Pull Lever'] = false,
             ['Rainbow Haki'] = true,
