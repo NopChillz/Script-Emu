@@ -83,7 +83,7 @@ _G.Nexus = {
     },
     Gun = {
         ['Kabucha'] = true,
-        ['Serpent Bow'] = true,
+        ['Serpent Bow'] = false,
         ['Soul Guitar'] = true
     },
     Race = {
