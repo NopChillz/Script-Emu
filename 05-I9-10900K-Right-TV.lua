@@ -1,18 +1,18 @@
 _G.Nexus = {
     Main = {
-        ['Enabled'] = false,
+        ['Enabled'] = true,
         ['Hop Cooldown'] = 15, -- 30 Seconds
         ['Quests'] = {
             ['Pull Lever'] = false,
-            ['Rainbow Haki'] = false,
-            ['Musketeer Hat'] = false,
-            ['Mirror Fractal'] = false,
+            ['Rainbow Haki'] = true,
+            ['Musketeer Hat'] = true,
+            ['Mirror Fractal'] = true,
             ['Sanguine Material'] = false,
         },
     },
     Sockets = {
         Enabled = true,
-        MachineName = 'PC-05',
+        MachineName = 'PC-06',
         Sword = {
             'Cursed Dual Katana',
             'Dark Dagger',
@@ -40,11 +40,10 @@ _G.Nexus = {
         ['Black Screen'] = true,
     },
     Fruits = {
-        ['Enabled'] = false,
-        ['Awakening Fruit'] = false,
+        ['Enabled'] = true,
+        ['Awakening Fruit'] = true,
         ['Main'] = {
             'Dough-Dough',
-            'Kitsune-Kitsune',
         },
         ['List'] = {
             'Dark-Dark',
@@ -60,22 +59,39 @@ _G.Nexus = {
         },
     },
     Melee = {
-        ['6 Melee'] = false,
+        ['6 Melee'] = true,
     },
     Sword = {
+        ['Pole'] = true,
+        ['Saber'] = true,
+        ['Midnight Blade'] = true,
+        ['Shisui'] = true,
+        ['Saddi'] = true,
+        ['Wando'] = true,
+        ['Yama'] = true,
+        ['Tushita'] = true,
+        ['Rengoku'] = true,
+        ['Canvander'] = true,
+        ['Buddy Sword'] = true,
+        ['Spikey Trident'] = true,
+        ['Twin Hooks'] = true,
+        ['Hallow Scryte'] = true,
+        ['True Triple Katana'] = true,
+        ['Cursed Dual Katana'] = true,
         ['Shark Anchor'] = false,
     },
     Gun = {
-        ['Kabucha'] = false,
-        ['Soul Guitar'] = false
+        ['Kabucha'] = true,
+        ['Serpent Bow'] = true,
+        ['Soul Guitar'] = true
     },
     Race = {
-        Enabled = false,
+        Enabled = true,
         Races = {
-            ['Mink'] = false,
+            ['Mink'] = true,
             ['Human'] = false,
-            ['Fishman'] = false,
-            ['Skypiea'] = false,
+            ['Fishman'] = true,
+            ['Skypiea'] = true,
         },
         Specials = {
             ['Ghoul'] = false,
@@ -87,8 +103,8 @@ _G.Nexus = {
     },
     Mastery = {
         Sword = {
-            ['Enabled'] = false,
-            ['Manual'] = false,
+            ['Enabled'] = true,
+            ['Manual'] = true,
             ['Sword Name'] = {
                 'Koko',
                 'Midnight Blade',
@@ -99,7 +115,7 @@ _G.Nexus = {
         },
         Gun = {
             ['Enabled'] = false,
-            ['Manual'] = false,
+            ['Manual'] = true,
             ['Gun Name'] = {
                 'Kabucha',
                 'Acidum Rifle',
