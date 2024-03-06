@@ -20,7 +20,8 @@ _G.Nexus = {
             'Tushita',
             'Yama',
             'Hallow Scythe',
-            'Saber'
+            'Saber',
+            'Shark Anchor'
         },
         Fruit = {
             'Kitsune',
