@@ -12,7 +12,7 @@ _G.Nexus = {
     },
     Sockets = {
         Enabled = true,
-        MachineName = 'PC-06',
+        MachineName = 'PC-05',
         Sword = {
             'Cursed Dual Katana',
             'Dark Dagger',
