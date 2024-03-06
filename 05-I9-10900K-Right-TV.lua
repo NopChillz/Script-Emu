@@ -1,12 +1,12 @@
 _G.Nexus = {
     Main = {
-        ['Enabled'] = true,
-        ['Hop Cooldown'] = 99999999999, -- 30 Seconds
+        ['Enabled'] = false,
+        ['Hop Cooldown'] = 15, -- 30 Seconds
         ['Quests'] = {
             ['Pull Lever'] = false,
-            ['Rainbow Haki'] = true,
-            ['Musketeer Hat'] = true,
-            ['Mirror Fractal'] = true,
+            ['Rainbow Haki'] = false,
+            ['Musketeer Hat'] = false,
+            ['Mirror Fractal'] = false,
             ['Sanguine Material'] = false,
         },
     },
@@ -63,31 +63,14 @@ _G.Nexus = {
         ['6 Melee'] = true,
     },
     Sword = {
-        ['Pole'] = true,
-        ['Saber'] = true,
-        ['Midnight Blade'] = true,
-        ['Shisui'] = true,
-        ['Saddi'] = true,
-        ['Wando'] = true,
-        ['Yama'] = true,
-        ['Tushita'] = true,
-        ['Rengoku'] = true,
-        ['Canvander'] = true,
-        ['Buddy Sword'] = true,
-        ['Spikey Trident'] = true,
-        ['Twin Hooks'] = true,
-        ['Hallow Scryte'] = true,
-        ['True Triple Katana'] = true,
-        ['Cursed Dual Katana'] = true,
         ['Shark Anchor'] = false,
     },
     Gun = {
-        ['Kabucha'] = true,
-        ['Serpent Bow'] = true,
-        ['Soul Guitar'] = true
+        ['Kabucha'] = false,
+        ['Soul Guitar'] = false
     },
     Race = {
-        Enabled = true,
+        Enabled = false,
         Races = {
             ['Mink'] = true,
             ['Human'] = false,
@@ -105,7 +88,7 @@ _G.Nexus = {
     Mastery = {
         Sword = {
             ['Enabled'] = true,
-            ['Manual'] = true,
+            ['Manual'] = false,
             ['Sword Name'] = {
                 'Koko',
                 'Midnight Blade',
@@ -115,8 +98,8 @@ _G.Nexus = {
             }
         },
         Gun = {
-            ['Enabled'] = false,
-            ['Manual'] = true,
+            ['Enabled'] = true,
+            ['Manual'] = false,
             ['Gun Name'] = {
                 'Kabucha',
                 'Acidum Rifle',
