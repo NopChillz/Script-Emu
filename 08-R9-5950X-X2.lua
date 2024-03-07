@@ -46,7 +46,7 @@ _G.Nexus = {
         ['Enabled'] = true,
         ['Awakening Fruit'] = true,
         ['Main'] = {
-            'Dough-Dough',
+            '',
         },
         ['List'] = {
             'Dark-Dark',
@@ -59,6 +59,7 @@ _G.Nexus = {
             'Mammoth-Mammoth',
             'Kitsune-Kitsune',
             'Leopard-Leopard',
+            'Dough-Dough',
         },
     },
     Melee = {
