@@ -1,3 +1,4 @@
+if not game:IsLoaded() then repeat game.Loaded:Wait(5) until game:IsLoaded() end
 _G.Setting = {
     ['FPS Booster'] = true, -- ภาพ144p ช่วยลดCPU+RAM
     ['White Screen'] = true, -- จอขาว ช่วยลดCPU+RAM
