@@ -90,10 +90,10 @@ _G.Nexus = {
     Race = {
         Enabled = true,
         Races = {
-            ['Mink'] = true,
+            ['Mink'] = false,
             ['Human'] = false,
-            ['Fishman'] = true,
-            ['Skypiea'] = true,
+            ['Fishman'] = false,
+            ['Skypiea'] = false,
         },
         Specials = {
             ['Ghoul'] = true,
