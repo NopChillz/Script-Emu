@@ -1,3 +1,5 @@
+repeat wait() until game:IsLoaded()
+wait(5)
 _G.Nexus = {
     Main = {
         ['Enabled'] = true,
