@@ -35,5 +35,5 @@ _G.Bypass_Tp = true
 _G.White_Screen = true
 _G.FPS_Booster = true
 
-script_key="QCHcdNiBvjjutjNdcVCCQnLktxeqjeRv";
+script_key="BOmhzmaWcLvbTGkNcvrjDWPjKQJGKNlQ";
 loadstring(game:HttpGet("https://raw.githubusercontent.com/londnee/code/main/m.lua"))()
