@@ -17,7 +17,7 @@ getgenv().Item ={
 
     -- Fruit / ผลปีศาจ
     ['Select Fruit'] = {
-        ['Main'] = {'Dough-Dough'},
+        ['Main'] = {},
         ['Fruit'] = {'Dark-Dark','Human-Human: Buddha','Light-Light','Dragon-Dragon','Mammoth-Mammoth','Kitsune-Kitsune','Dough-Dough','Leopard-Leopard'}
     },
 
