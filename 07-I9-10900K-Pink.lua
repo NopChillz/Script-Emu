@@ -3,7 +3,7 @@ wait(5)
 _G.Nexus = {
     Main = {
         ['Enabled'] = true,
-        ['Hop Cooldown'] = 15, -- 30 Seconds
+        ['Hop Cooldown'] = 30, -- 30 Seconds
         ['Quests'] = {
             ['Pull Lever'] = true,
             ['Rainbow Haki'] = true,
@@ -74,12 +74,12 @@ _G.Nexus = {
         ['Yama'] = true,
         ['Tushita'] = true,
         ['Rengoku'] = true,
-        ['Canvander'] = true,
-        ['Buddy Sword'] = true,
-        ['Spikey Trident'] = true,
-        ['Twin Hooks'] = true,
+        ['Canvander'] = false,
+        ['Buddy Sword'] = false,
+        ['Spikey Trident'] = false,
+        ['Twin Hooks'] = false,
         ['Hallow Scryte'] = true,
-        ['True Triple Katana'] = true,
+        ['True Triple Katana'] = false,
         ['Cursed Dual Katana'] = true,
         ['Shark Anchor'] = false,
     },
@@ -91,14 +91,14 @@ _G.Nexus = {
     Race = {
         Enabled = true,
         Races = {
-            ['Mink'] = false,
+            ['Mink'] = true,
             ['Human'] = false,
-            ['Fishman'] = false,
-            ['Skypiea'] = false,
+            ['Fishman'] = true,
+            ['Skypiea'] = true,
         },
         Specials = {
-            ['Ghoul'] = true,
-            ['Cyborg'] = true,
+            ['Ghoul'] = false,
+            ['Cyborg'] = false,
         },
         V4 = {
             ['Enabled'] = false,
