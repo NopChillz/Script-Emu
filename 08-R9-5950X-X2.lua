@@ -82,7 +82,7 @@ _G.Nexus = {
         ['Hallow Scryte'] = true,
         ['True Triple Katana'] = false,
         ['Cursed Dual Katana'] = true,
-        ['Shark Anchor'] = false,
+        ['Shark Anchor'] = true,
     },
     Gun = {
         ['Kabucha'] = true,
