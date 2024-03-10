@@ -1,42 +1,39 @@
 if not game:IsLoaded() then repeat game.Loaded:Wait(5) until game:IsLoaded() end
-_G.Setting = {
-    ['FPS Booster'] = true, -- ภาพ144p ช่วยลดCPU+RAM
-    ['White Screen'] = true, -- จอขาว ช่วยลดCPU+RAM
-    ['Auto Rejoin'] = true, -- รีจอย
-    ['Roblox Account Manager'] = {
-        ['Enabled'] = false,
-        ['Delay'] = 300
+
+-- Setting
+getgenv().Item ={
+    -- Item / ไอเทม
+    ['Godhuman'] = true,
+    ['CDK'] = true,
+    ['Soul Guitar'] = true,
+
+    -- Quest / เควส
+    ['Dough Awaken'] = true,
+    ['RGB Haki'] = true,
+
+    -- Race / เผ่า
+    ['Evo Race V3'] = true,
+    ['Select Race'] = {'Fishman','Human','Mink','Skypiea'},
+
+    -- Fruit / ผลปีศาจ
+    ['Select Fruit'] = {
+        ['Main'] = {'Dough-Dough'},
+        ['Fruit'] = {'Dark-Dark','Human-Human: Buddha','Light-Light','Dragon-Dragon','Mammoth-Mammoth','Kitsune-Kitsune','Dough-Dough','Leopard-Leopard'}
     },
 
-    ['Farm Item'] = {
-        ['Godhuman'] = true, -- 👊
-        ['Cursed Dual Katana'] = true, -- ⚔️
-        ['Hallow Scythe'] = true, -- 🔪
-        ['Valkyrie Helm'] = true, -- 👑
-        ['Mirror Fractal'] = true -- 🧩
-    },
-    ['Farm Mastery'] = { -- ฟาร์มมาสเตอรี่
+    -- Mastery / มาสเตอรี่
+    ['Mastery'] = {
         ['Melee'] = true,
         ['Sword'] = true,
-        ['Devil Fruit'] = true,
+        ['Fruit'] = true,
         ['Gun'] = false
-    },
-    ['Farm Fruit'] = {
-        ['Select Main Fruit'] = {''}, -- ผลหลัก 
-        ['Select Fruit'] = {'Dark-Dark','Human-Human: Buddha','Light-Light','Dragon-Dragon','Mammoth-Mammoth','Dough-Dough','Leopard-Leopard','Kitsune-Kitsune'}, -- ผลรอง
-        ['Auto Awaken'] = true -- ทำผลตื่นออโต้ 🍎
-    },
-    ['Farm Quest'] = { 
-        ['Quest Dough Awaken'] = true -- ทำโมจิตื่น 🍩
-    },
-
-    ['Mode'] = {
-        ['Bypass Tp'] = true, -- วาปฟาร์ม
-        ['Faster Farm'] = true, -- เควสลับเพิ่มความเร็วในการฟาร์ม โอกาศติด 100%
-        ['Triple Quest'] = true --รับเควส 3ระดับความเร็วการฟาร์ม Exp X3
     }
 }
 
-_G.Switch_Hub_No_1 = true -- เปิดใช้งานSwitch Hub 
-script_key = "dQmSjpUTZgTncNrPNZnKrDoubGOPDDAp"
-loadstring(game:HttpGet("https://raw.githubusercontent.com/londnee/code/main/sw.kaitun.lua"))()
+-- CPU Booster
+_G.Bypass_Tp = true
+_G.White_Screen = true
+_G.FPS_Booster = true
+
+script_key="QCHcdNiBvjjutjNdcVCCQnLktxeqjeRv";
+loadstring(game:HttpGet("https://raw.githubusercontent.com/londnee/code/main/m.lua"))()
