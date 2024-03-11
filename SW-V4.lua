@@ -8,13 +8,13 @@ _G.Setting = {
         ['Farm'] = { 
             'qfm03y',
             'bdxzqv',
-			      'pjbeup',
-			      'dblznn',
+			'pjbeup',
+			'dblznn',
             'ngwo3w',
-			      'cokw74',
-			      'wn4s4d',
+			'cokw74',
+			'wn4s4d',
             'o6zlyc',
-	      		'y3glrs',
+			'y3glrs',
             'rrcbuz'
         }
     },
