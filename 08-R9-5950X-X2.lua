@@ -46,7 +46,6 @@ _G.Nexus = {
         ['Enabled'] = true,
         ['Awakening Fruit'] = true,
         ['Main'] = {
-            '',
         },
         ['List'] = {
             'Dark-Dark',
