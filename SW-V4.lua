@@ -6,16 +6,16 @@ _G.Setting = {
         ['Helper'] = 'zq0vh1', 
         ['Helper2'] = '63g6os', 
         ['Farm'] = { 
-            'qfm03y',
-            'bdxzqv',
-			'pjbeup',
-			'dblznn',
-            'ngwo3w',
-			'cokw74',
-			'wn4s4d',
-            'o6zlyc',
-			'y3glrs',
-            'rrcbuz'
+        	'qfm03y',
+            	'bdxzqv',
+		'pjbeup',
+		'dblznn',
+		'ngwo3w',
+		'cokw74',
+		'wn4s4d',
+            	'o6zlyc',
+		'y3glrs',
+            	'rrcbuz'
         }
     },
     -- Booster CPU
