@@ -7,10 +7,10 @@ wait(5)
 _G.Team = "Pirate" -- Marine / Pirate
 _G.KAITUN_SCRIPT = true
 _G.MainSettings = {
-        ["EnabledHOP"] = true, -- เปิด HOP ( มันไม่มีอยู่ละใส่มาเท่ๆ )
+        ["EnabledHOP"] = false, -- เปิด HOP ( มันไม่มีอยู่ละใส่มาเท่ๆ )
         ['FPSBOOST'] = true, -- ภาพกาก
         ["FPSLOCKAMOUNT"] = 60, -- จำนวน FPS
-        ['WhiteScreen'] = true, -- จอขาว
+        ['WhiteScreen'] = false, -- จอขาว
         ['CloseUI'] = false, -- ปิด Ui
         ["NotifycationExPRemove"] = false, -- ลบ ExP ที่เด้งตอนฆ่ามอน
         ['AFKCheck'] = 150, -- ถ้ายืนนิ่งเกินวิที่ตั้งมันจะรีเกม
