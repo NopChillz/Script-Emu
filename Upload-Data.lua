@@ -47,8 +47,6 @@ end
 
 local function GetLogAllMeleeNew()
     local combat = 0
-	
-    local combat = 0
     local BuyDragonTalon = tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon", true))
     if BuyDragonTalon then
         if BuyDragonTalon == 1 then
