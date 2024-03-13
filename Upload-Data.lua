@@ -45,56 +45,13 @@ local function CheckLogRaceV()
 	return RaceVText
 end
 
-local function GetLogAllMeleeNew()
-    local combat = 0
-    local BuyDragonTalon = tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon", true))
-    if BuyDragonTalon then
-        if BuyDragonTalon == 1 then
-            combat = combat + 1
-        end
-    end
-    local BuySuperhuman = tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman", true))
-    if BuySuperhuman then
-        if BuySuperhuman == 1 then
-            combat = combat + 1
-        end
-    end
-    local BuySharkmanKarate = tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate", true))
-    if BuySharkmanKarate then
-        if BuySharkmanKarate == 1 then
-            combat = combat + 1
-        end
-    end
-    local BuyDeathStep = tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep", true))
-    if BuyDeathStep then
-        if BuyDeathStep == 1 then
-            combat = combat + 1
-        end
-    end
-    local BuyElectricClaw = tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw", true))
-    if BuyElectricClaw then
-        if BuyElectricClaw == 1 then
-            combat = combat + 1
-        end
-    end
-    local BuyGodhuman = tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman", true))
-    if BuyGodhuman then
-        if BuyGodhuman == 1 then
-            combat = combat + 1
-        end
-    end
-	
-    return tostring(combat)
-end
-
 local dataToSend = {
     player = game.Players.LocalPlayer.Name,
     level = game.Players.LocalPlayer.Data.Level.Value,
 	money =  game:GetService("Players").LocalPlayer.Data.Beli.Value,
 	Fragment = game:GetService("Players").LocalPlayer.Data.Fragments.Value,
 	World = WorldText,
-	RaceV = CheckLogRaceV(),
-	CheckMelee = GetLogAllMeleeNew()
+	RaceV = CheckLogRaceV()
 }
 
 sendDataToServer(dataToSend)
