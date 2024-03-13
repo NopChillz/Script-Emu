@@ -51,7 +51,8 @@ local dataToSend = {
 	money =  game:GetService("Players").LocalPlayer.Data.Beli.Value,
 	Fragment = game:GetService("Players").LocalPlayer.Data.Fragments.Value,
 	World = WorldText,
-	RaceV = CheckLogRaceV()
+	Race = game:GetService("Players").LocalPlayer.Data.Race.Value,
+	RaceV = CheckLogRaceV(),
 }
 
 sendDataToServer(dataToSend)
