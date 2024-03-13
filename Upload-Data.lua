@@ -48,35 +48,42 @@ end
 local function GetLogAllMeleeNew()
     local combat = 0
 	
+    local combat = 0
     local BuyDragonTalon = tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon", true))
-	local BuySuperhuman = tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman", true))
-	local BuySharkmanKarate = tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate", true))
-	local BuyDeathStep = tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep", true))
-	local BuyElectricClaw = tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw", true))
-	local BuyGodhuman = tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman", true))
-	
-    if BuyDragonTalon == 1 then
-        combat = combat + 1
-	end
-	
-    if BuySuperhuman == 1 then
-         combat = combat + 1
-	end
-	
-    if BuySharkmanKarate == 1 then
-         combat = combat + 1
-	end
-	
-    if BuyDeathStep == 1 then
-         combat = combat + 1
-	end
-	
-    if BuyElectricClaw == 1 then
-         combat = combat + 1
-	end
-	
-    if BuyGodhuman == 1 then
-         combat = combat + 1
+    if BuyDragonTalon then
+        if BuyDragonTalon == 1 then
+            combat = combat + 1
+        end
+    end
+    local BuySuperhuman = tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman", true))
+    if BuySuperhuman then
+        if BuySuperhuman == 1 then
+            combat = combat + 1
+        end
+    end
+    local BuySharkmanKarate = tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate", true))
+    if BuySharkmanKarate then
+        if BuySharkmanKarate == 1 then
+            combat = combat + 1
+        end
+    end
+    local BuyDeathStep = tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep", true))
+    if BuyDeathStep then
+        if BuyDeathStep == 1 then
+            combat = combat + 1
+        end
+    end
+    local BuyElectricClaw = tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw", true))
+    if BuyElectricClaw then
+        if BuyElectricClaw == 1 then
+            combat = combat + 1
+        end
+    end
+    local BuyGodhuman = tonumber(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman", true))
+    if BuyGodhuman then
+        if BuyGodhuman == 1 then
+            combat = combat + 1
+        end
     end
 	
     return tostring(combat)
