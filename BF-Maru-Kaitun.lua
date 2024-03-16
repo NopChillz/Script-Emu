@@ -7,27 +7,30 @@ wait(5)
 _G.Team = "Pirate" -- Marine / Pirate
 _G.KAITUN_SCRIPT = true
 _G.MainSettings = {
-        ["EnabledHOP"] = false, -- เปิด HOP ( มันไม่มีอยู่ละใส่มาเท่ๆ )
+        ["EnabledHOP"] = true, -- เปิด HOP ( มันไม่มีอยู่ละใส่มาเท่ๆ )
         ['FPSBOOST'] = true, -- ภาพกาก
-        ["FPSLOCKAMOUNT"] = 60, -- จำนวน FPS
-        ['WhiteScreen'] = false, -- จอขาว
+        ["FPSLOCKAMOUNT"] = 30, -- จำนวน FPS
+        ['WhiteScreen'] = true, -- จอขาว
         ['CloseUI'] = false, -- ปิด Ui
-        ["NotifycationExPRemove"] = false, -- ลบ ExP ที่เด้งตอนฆ่ามอน
-        ['AFKCheck'] = 150, -- ถ้ายืนนิ่งเกินวิที่ตั้งมันจะรีเกม
-        ["LockFragments"] = 100000, -- ล็อคเงินม่วง
+        ["NotifycationExPRemove"] = true, -- ลบ ExP ที่เด้งตอนฆ่ามอน
+        ['AFKCheck'] = 3600, -- ถ้ายืนนิ่งเกินวิที่ตั้งมันจะรีเกม
+        ["LockFragments"] = 200000, -- ล็อคเงินม่วง
         ["LockFruitsRaid"] = { -- ล็อคผลที่ไม่เอาไปลงดัน
             [1] = "Dough-Dough",
-            [2] = "Dragon-Dragon"
+            [2] = "Kisune-Kisune",
+            [3] = "Mammoth-Mammoth",
+            [4] = "Leopard-Leopard",
+            [5] = "T-Rex-T-Rex"
         }
     }
 _G.Fruits_Settings = { -- ตั้งค่าผล
-    ['Main_Fruits'] = {'Dough-Dough'}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
-    ['Select_Fruits'] = {"Flame-Flame", "Ice-Ice", "Quake-Quake", "Light-Light", "Dark-Dark", "Spider-Spider", "Rumble-Rumble", "Magma-Magma", "Buddha-Buddha"} -- กินหรือซื้อตอนไม่มีผล
+    ['Main_Fruits'] = {"Kitsune-Kitsune"}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
+    ['Select_Fruits'] = {"Dark-Dark", "Mammoth-Mammoth", "Quake-Quake", "Light-Light", "Leopard-Leopard", "Dough-Dough", "Rumble-Rumble", "Magma-Magma", "Buddha-Buddha"} -- กินหรือซื้อตอนไม่มีผล
 }
 _G.Quests_Settings = { -- ตั้งค่าเควสหลักๆ
     ['Rainbow_Haki'] = true,
     ["MusketeerHat"] = true,
-    ["PullLever"] = false,
+    ["PullLever"] = true,
     ['DoughQuests_Mirror'] = {
         ['Enabled'] = true,
         ['UseFruits'] = true
@@ -41,7 +44,7 @@ _G.Races_Settings = { -- ตั้งค่าเผ่า
         ["Races_Lock"] = {
             ["Races"] = { -- Select Races U want
                 ["Mink"] = true,
-                ["Human"] = true,
+                ["Human"] = false,
                 ["Fishman"] = true
             },
             ["RerollsWhenFragments"] = 20000 -- Random Races When Your Fragments is >= Settings
@@ -77,19 +80,16 @@ _G.SwordSettings = { -- ดาบที่จะทำ
     ['Wando'] = true,
     ['Yama'] = true,
     ['Rengoku'] = true,
-    ['Canvander'] = false,
-    ['BuddySword'] = false,
-    ['TwinHooks'] = false,
+    ['Canvander'] = true,
+    ['BuddySword'] = true,
+    ['TwinHooks'] = true,
     ['HallowScryte'] = true,
-    ['TrueTripleKatana'] = false,
+    ['TrueTripleKatana'] = true,
     ['CursedDualKatana'] = true
-}
-_G.SharkAnchor_Settings = {
-    ["Enabled_Farm"] = false,
 }
 _G.GunSettings = { -- ปืนที่จะทำ
     ['Kabucha'] = true,
-    ['SerpentBow'] = false,
+    ['SerpentBow'] = true,
     ['SoulGuitar'] = true
 }
 
