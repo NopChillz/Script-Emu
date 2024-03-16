@@ -13,7 +13,7 @@ getgenv().Item ={
 
     -- Race / เผ่า
     ['Evo Race V3'] = true,
-    ['Select Race'] = {'Fishman','Human','Mink','Skypiea'},
+    ['Select Race'] = {'Fishman','Human','Mink'},
 
     -- Fruit / ผลปีศาจ
     ['Select Fruit'] = {
