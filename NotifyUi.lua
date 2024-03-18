@@ -1,3 +1,4 @@
+wait(10)
 -- # Link Github Ui
 -- https://github.com/Eazvy/UILibs/blob/main/Notifications/Jxereas/Preview
 
