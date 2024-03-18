@@ -1,4 +1,4 @@
-wait(10)
+wait(30)
 -- # Link Github Ui
 -- https://github.com/Eazvy/UILibs/blob/main/Notifications/Jxereas/Preview
 
@@ -51,7 +51,7 @@ local function CheckSA_NopChillz()
 end
 
 while true do
-	wait(10)
+	wait(30)
 	Notification.new("info", "[👑] Blox Fruits", "Ui Version 1.2")
 	CheckPull_Lever_NopChillz()
 	CheckSA_NopChillz()
