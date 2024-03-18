@@ -43,7 +43,7 @@ local function CheckSA_NopChillz()
     end
 
     -- แสดง Notification หากพบ Shark Anchor
-    if hasSharkAnchor then
+    if hasSharkAnchor == true then
         Notification.new("success", "[✔️] Successfully", "⚓ Shark Anchor : ✔️")
 	else
 		Notification.new("error", "[✔❌] Unsuccessful", "⚓ Shark Anchor : ❌")
