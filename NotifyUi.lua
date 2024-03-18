@@ -51,7 +51,7 @@ local function CheckSA_NopChillz()
 end
 
 while true do
-	Notification.new("info", "[👑] Blox Fruits", "Ui Version 1.0")
+	Notification.new("info", "[👑] Blox Fruits", "Ui Version 1.1")
 	CheckPull_Lever_NopChillz()
 	CheckSA_NopChillz()
 	wait(60)
