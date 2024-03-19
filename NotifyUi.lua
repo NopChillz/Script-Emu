@@ -46,13 +46,13 @@ local function CheckSA_NopChillz()
     if hasSharkAnchor then
         Notification.new("success", "[✔️] Successfully", "⚓ Shark Anchor : ✔️")
 	else
-		Notification.new("error", "[✔❌] Unsuccessful", "⚓ Shark Anchor : ❌")
+		Notification.new("error", "[❌] Unsuccessful", "⚓ Shark Anchor : ❌")
     end
 end
 
 while true do
 	wait(30)
-	Notification.new("info", "[👑] Blox Fruits", "Ui Version 1.2")
+	Notification.new("info", "[👑] Blox Fruits", "Ui Version 1.3")
 	CheckPull_Lever_NopChillz()
 	CheckSA_NopChillz()
 	wait(60)
