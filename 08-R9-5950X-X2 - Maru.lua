@@ -1,36 +1,30 @@
-repeat task.wait() until game:IsLoaded(5)
+repeat task.wait() until game:IsLoaded()
 repeat task.wait() until game.Players
 repeat task.wait() until game.Players.LocalPlayer
 repeat task.wait() until game.Players.LocalPlayer:FindFirstChild("PlayerGui")
 repeat task.wait() until game.Players.LocalPlayer.PlayerGui:FindFirstChild("Main");
+wait(5)
 _G.Team = "Pirate" -- Marine / Pirate
 _G.KAITUN_SCRIPT = true
-_G.LogsDes = {
-    ["Enabled"] = false, -- เปิดการใช้งาน
-    ["SendAlias"] = false, -- เปิดการส่ง Alias
-    ["SendDescription"] = false, -- เปิดการส่ง Des
-    ["DelaySend"] = 5 -- วินาที
-}
 _G.MainSettings = {
-        ["EnabledHOP"] = false, -- เปิด HOP ( มันไม่มีอยู่ละใส่มาเท่ๆ )
+        ["EnabledHOP"] = true, -- เปิด HOP ( มันไม่มีอยู่ละใส่มาเท่ๆ )
         ['FPSBOOST'] = true, -- ภาพกาก
-        ["FPSLOCKAMOUNT"] = 15, -- จำนวน FPS
+        ["FPSLOCKAMOUNT"] = 20, -- จำนวน FPS
         ['WhiteScreen'] = true, -- จอขาว
         ['CloseUI'] = false, -- ปิด Ui
-        ["NotifycationExPRemove"] = false, -- ลบ ExP ที่เด้งตอนฆ่ามอน
-        ['AFKCheck'] = 180, -- ถ้ายืนนิ่งเกินวิที่ตั้งมันจะรีเกม
-        ["LockFragments"] = 200000, -- ล็อคเงินม่วง
+        ["NotifycationExPRemove"] = true, -- ลบ ExP ที่เด้งตอนฆ่ามอน
+        ['AFKCheck'] = 3600, -- ถ้ายืนนิ่งเกินวิที่ตั้งมันจะรีเกม
+        ["LockFragments"] = 50000, -- ล็อคเงินม่วง
         ["LockFruitsRaid"] = { -- ล็อคผลที่ไม่เอาไปลงดัน
             [1] = "Dough-Dough",
-            [2] = "Dragon-Dragon",
-            [3] = "Leopard-Leopard",
-            [4] = "Kitsune-Kitsune",
-            [5] = "Rex-Rex",
+            [2] = "Kisune-Kisune",
+            [3] = "Dragon-Dragon",
+            [4] = "Leopard-Leopard"
         }
     }
 _G.Fruits_Settings = { -- ตั้งค่าผล
-    ['Main_Fruits'] = {'Dough-Dough','Leopard-Leopard','Kitsune-Kitsune'}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
-    ['Select_Fruits'] = {"Light-Light", "Dark-Dark", "Rumble-Rumble", "Magma-Magma", "Buddha-Buddha"} -- กินหรือซื้อตอนไม่มีผล
+    ['Main_Fruits'] = {"Dough-Dough"}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
+    ['Select_Fruits'] = {"Dark-Dark", "Dragon-Dragon", "Quake-Quake", "Light-Light", "Leopard-Leopard", "Buddha-Buddha","Kitsune-Kitsune"} -- กินหรือซื้อตอนไม่มีผล
 }
 _G.Quests_Settings = { -- ตั้งค่าเควสหลักๆ
     ['Rainbow_Haki'] = true,
@@ -49,7 +43,7 @@ _G.Races_Settings = { -- ตั้งค่าเผ่า
         ["Races_Lock"] = {
             ["Races"] = { -- Select Races U want
                 ["Mink"] = true,
-                ["Human"] = true,
+                ["Human"] = false,
                 ["Fishman"] = true
             },
             ["RerollsWhenFragments"] = 20000 -- Random Races When Your Fragments is >= Settings
@@ -77,7 +71,7 @@ _G.FarmMastery_Settings = {
     }
 }
 _G.SwordSettings = { -- ดาบที่จะทำ
-    ['Saber'] = false,
+    ['Saber'] = true,
     ["Pole"] = true,
     ['MidnightBlade'] = true,
     ['Shisui'] = true,
@@ -97,7 +91,6 @@ _G.GunSettings = { -- ปืนที่จะทำ
     ['SerpentBow'] = true,
     ['SoulGuitar'] = true
 }
--- Script Here !!!
 
 getgenv().Key = "MARU-A2C8-MQPWE-MMO4-IMGOV-GYZ7"
 getgenv().id = "904357258190811178"
