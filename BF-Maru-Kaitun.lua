@@ -7,7 +7,7 @@ wait(5)
 _G.Team = "Pirate" -- Marine / Pirate
 _G.KAITUN_SCRIPT = true
 _G.MainSettings = {
-        ["EnabledHOP"] = true, -- เปิด HOP ( มันไม่มีอยู่ละใส่มาเท่ๆ )
+        ["EnabledHOP"] = false, -- เปิด HOP ( มันไม่มีอยู่ละใส่มาเท่ๆ )
         ['FPSBOOST'] = true, -- ภาพกาก
         ["FPSLOCKAMOUNT"] = 15, -- จำนวน FPS
         ['WhiteScreen'] = true, -- จอขาว
@@ -93,7 +93,7 @@ _G.GunSettings = { -- ปืนที่จะทำ
     ['SoulGuitar'] = true
 }
 
-getgenv().Key = "MARU-YIE1C-2GVC-LAKEN-TETR-38VN6"
-getgenv().id = "726490576790487042"
+getgenv().Key = "MARU-IGXEM-ENGQ-GHQFG-NO9R-AUPPL"
+getgenv().id = "1220380830300635207"
 getgenv().Script_Mode = "Kaitun_Script"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MaruBitkub/main/Mobile.lua"))()
