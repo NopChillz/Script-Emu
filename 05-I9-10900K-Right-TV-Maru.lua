@@ -6,6 +6,7 @@ repeat task.wait() until game.Players.LocalPlayer.PlayerGui:FindFirstChild("Main
 wait(5)
 _G.Team = "Pirate" -- Marine / Pirate
 _G.FixBugLDArce = true
+_G.FixBugLDArce = true
 _G.KAITUN_SCRIPT = true
 _G.MainSettings = {
         ["EnabledHOP"] = false, -- เปิด HOP ( มันไม่มีอยู่ละใส่มาเท่ๆ )
