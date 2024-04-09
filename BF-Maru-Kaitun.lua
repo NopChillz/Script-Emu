@@ -5,7 +5,6 @@ repeat task.wait() until game.Players.LocalPlayer:FindFirstChild("PlayerGui")
 repeat task.wait() until game.Players.LocalPlayer.PlayerGui:FindFirstChild("Main");
 wait(5)
 _G.Team = "Pirate" -- Marine / Pirate
-_G.FixBugLDArce = true
 _G.KAITUN_SCRIPT = true
 _G.MainSettings = {
         ["EnabledHOP"] = false, -- เปิด HOP ( มันไม่มีอยู่ละใส่มาเท่ๆ )
@@ -26,7 +25,7 @@ _G.MainSettings = {
     }
 _G.Fruits_Settings = { -- ตั้งค่าผล
     ['Main_Fruits'] = {}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
-    ['Select_Fruits'] = {"Dark-Dark", "Mammoth-Mammoth", "Quake-Quake", "Light-Light", "Leopard-Leopard", "Dough-Dough", "Rumble-Rumble", "Magma-Magma", "Buddha-Buddha", "Kitsune-Kitsune"} -- กินหรือซื้อตอนไม่มีผล
+    ['Select_Fruits'] = {} -- กินหรือซื้อตอนไม่มีผล
 }
 _G.Quests_Settings = { -- ตั้งค่าเควสหลักๆ
     ['Rainbow_Haki'] = true,
