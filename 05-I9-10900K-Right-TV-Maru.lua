@@ -6,12 +6,11 @@ repeat task.wait() until game.Players.LocalPlayer.PlayerGui:FindFirstChild("Main
 wait(5)
 _G.Team = "Pirate" -- Marine / Pirate
 _G.KAITUN_SCRIPT = true
-_G.FixBugLDArce = true
 _G.MainSettings = {
         ["EnabledHOP"] = false, -- เปิด HOP ( มันไม่มีอยู่ละใส่มาเท่ๆ )
         ['FPSBOOST'] = true, -- ภาพกาก
         ["FPSLOCKAMOUNT"] = 15, -- จำนวน FPS
-        ['WhiteScreen'] = false, -- จอขาว
+        ['WhiteScreen'] = true, -- จอขาว
         ['CloseUI'] = false, -- ปิด Ui
         ["NotifycationExPRemove"] = true, -- ลบ ExP ที่เด้งตอนฆ่ามอน
         ['AFKCheck'] = 3600, -- ถ้ายืนนิ่งเกินวิที่ตั้งมันจะรีเกม
