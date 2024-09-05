@@ -1,1 +1,1 @@
-mushroom = game:GetService("Players").LocalPlayer.Data.Coins.Value
+local mushroom = game:GetService("Players").LocalPlayer.Data.Coins.Value
