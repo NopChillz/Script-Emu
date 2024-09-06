@@ -37,4 +37,9 @@ function SendFullMoon(vux)
     local R = {Url = url, Body = newdata, Method = "POST", Headers = headers}
     request(R)
 end
-SendFullMoon('https://discord.com/api/webhooks/1281428198134911048/3ZLXb87DdN3v_jXPoWTed0R_XFHbqlD7u3FEUziNxkM9RYNDRGT9TUjaDnA_UBEusJv_')
+
+-- เริ่มการส่งข้อมูลทุกๆ 10 นาที
+while true do
+    SendFullMoon('https://discord.com/api/webhooks/1281428198134911048/3ZLXb87DdN3v_jXPoWTed0R_XFHbqlD7u3FEUziNxkM9RYNDRGT9TUjaDnA_UBEusJv_')
+    wait(600)  -- รอ 600 วินาที (10 นาที)
+end
