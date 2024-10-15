@@ -96,6 +96,6 @@ _G.GunSettings = { -- ปืนที่จะทำ
 }
 -- Script Here !!!
 
-getgenv().Key = "MARU-YIE1C-2GVC-LAKEN-TETR-38VN6"
-getgenv().id = "726490576790487042"
+getgenv().Key = "MARU-0Y768-LYQ1-QEC8X-GBH8-FO5TX"
+getgenv().id = "1039170615715827712"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MaruBitkub/main/Mobile.lua"))()
