@@ -87,7 +87,7 @@ _G.SwordSettings = { -- ดาบที่จะทำ
     ['CursedDualKatana'] = true
 }
 _G.SharkAnchor_Settings = {
-    ["Enabled_Farm"] = false,
+    ["Enabled_Farm"] = true,
 }
 _G.GunSettings = { -- ปืนที่จะทำ
     ['Kabucha'] = true,
