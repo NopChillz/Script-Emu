@@ -1,4 +1,3 @@
-wait(5)
 -- Discord : RaMaFia
 wait(5)
 getgenv().Key = "MARU-0KTBL-WGQE-ZMP4P-D065-S1TX1"
