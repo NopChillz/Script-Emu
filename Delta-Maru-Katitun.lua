@@ -2,7 +2,7 @@ repeat task.wait() until game:IsLoaded()
 repeat task.wait() until game.Players
 repeat task.wait() until game.Players.LocalPlayer
 repeat task.wait() until game.Players.LocalPlayer:FindFirstChild("PlayerGui")
-repeat task.wait() until game.Players.LocalPlayer.PlayerGui:FindFirstChild("Main");
+-- repeat task.wait() until game.Players.LocalPlayer.PlayerGui:FindFirstChild("Main"); -- Delete to Fix Not Choose Team
 wait(5)
 _G.Team = "Pirate" -- Marine / Pirate
 getgenv().Script_Mode = "Kaitun_Script"
