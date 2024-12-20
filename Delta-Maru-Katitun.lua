@@ -1,6 +1,3 @@
--- Discord : RaMaFia
-wait(5)
-getgenv().Key = "MARU-0KTBL-WGQE-ZMP4P-D065-S1TX1"
-getgenv().id = "411861336553947137"
-_G.Script_Language = "Thai"
-loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MaruBitkub/main/Mobile.lua"))()
+repeat wait() until game:IsLoaded() and game.Players.LocalPlayer 
+getgenv().Key = "dde14daabce579fe81815c08" 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaHub.lua"))() 
