@@ -23,8 +23,8 @@ _G.MainSettings = {
         }
     }
 _G.Fruits_Settings = { -- ตั้งค่าผล
-    ['Main_Fruits'] = {}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
-    ['Select_Fruits'] = {"Dark-Dark", "Dragon-Dragon", "Quake-Quake", "Light-Light", "Leopard-Leopard", "Buddha-Buddha","Kitsune-Kitsune","Dough-Dough"} -- กินหรือซื้อตอนไม่มีผล
+    ['Main_Fruits'] = {"Dragon-Dragon"}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
+    ['Select_Fruits'] = {"Dark-Dark", "Dragon-Dragon", "Quake-Quake", "Light-Light", "Leopard-Leopard", "Buddha-Buddha","Kitsune-Kitsune","Dough-Dough","Dragon-Dragon"} -- กินหรือซื้อตอนไม่มีผล
 }
 _G.Quests_Settings = { -- ตั้งค่าเควสหลักๆ
     ['Rainbow_Haki'] = true,
