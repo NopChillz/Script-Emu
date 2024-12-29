@@ -2,14 +2,14 @@ repeat task.wait() until game:IsLoaded()
 repeat task.wait() until game.Players
 repeat task.wait() until game.Players.LocalPlayer
 repeat task.wait() until game.Players.LocalPlayer:FindFirstChild("PlayerGui")
--- repeat task.wait() until game.Players.LocalPlayer.PlayerGui:FindFirstChild("Main"); -- Delete to Fix Not Choose Team
 wait(10)
 _G.Team = "Pirate" -- Marine / Pirate
 getgenv().Script_Mode = "Kaitun_Script"
 _G.MainSettings = {
         ["EnabledHOP"] = true, -- เปิด HOP ( มันไม่มีอยู่ละใส่มาเท่ๆ )
+        ["UseGun"] = true,
         ['FPSBOOST'] = true, -- ภาพกาก
-        ["FPSLOCKAMOUNT"] = 20, -- จำนวน FPS
+        ["FPSLOCKAMOUNT"] = 15, -- จำนวน FPS
         ['WhiteScreen'] = true, -- จอขาว
         ['CloseUI'] = false, -- ปิด Ui
         ["NotifycationExPRemove"] = true, -- ลบ ExP ที่เด้งตอนฆ่ามอน
@@ -89,13 +89,13 @@ _G.SwordSettings = { -- ดาบที่จะทำ
 }
 _G.SharkAnchor_Settings = {
     ["Enabled_Farm"] = true,
+    ['FarmAfterMoney'] = 2500000
 }
 _G.GunSettings = { -- ปืนที่จะทำ
     ['Kabucha'] = true,
     ['SerpentBow'] = true,
     ['SoulGuitar'] = true
 }
-
 -- Discord : RaMaFia
 getgenv().Key = "MARU-0KTBL-WGQE-ZMP4P-D065-S1TX1"
 getgenv().id = "411861336553947137"
