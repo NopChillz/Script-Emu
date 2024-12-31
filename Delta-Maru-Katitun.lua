@@ -101,3 +101,61 @@ getgenv().Key = "MARU-0KTBL-WGQE-ZMP4P-D065-S1TX1"
 getgenv().id = "411861336553947137"
 getgenv().Script_Mode = "Kaitun_Script"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MaruBitkub/main/Mobile.lua"))()
+
+--Add On By.NopChillz | TEAM
+
+wait(10)
+-- ฟังก์ชันที่จะเรียกทุกๆ 10 นาที
+function TradeCandyNonStop()
+    local args = { 
+        [1] = "Candies",
+        [2] = "Buy",
+        [3] = 1,
+        [4] = 1
+    }
+
+    -- ฟังก์ชันนี้จะทำงานทุกๆ 10 นาที
+    while true do
+        local CurrentLevelFunc = game.Players.LocalPlayer.Data.Level.Value
+        local CurrentFlagmentFucn = game:GetService("Players").LocalPlayer.Data.Fragments.Value
+
+        -- ถ้าผู้เล่นมีเลเวลมากกว่าหรือเท่ากับ 2600
+        if CurrentLevelFunc >= 2600 then
+            print("Player has reached level 2600. Switching to new args.")
+            
+            -- เปลี่ยน args และเริ่มทำงานไปเรื่อยๆ จนกว่า Fragments จะเกิน 70,000
+            local newArgs = {
+                [1] = "Candies",
+                [2] = "Buy",
+                [3] = 2,
+                [4] = 2
+            }
+
+            -- ทำงานต่อไปจนกว่า Fragments จะเกิน 70,000
+            while CurrentFlagmentFucn <= 70000 do
+                -- ทุกๆ 10 วินาทีจะทำการเปลี่ยน newArgs
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(newArgs))
+                print("Running the action, current fragments: " .. CurrentFlagmentFucn)
+                
+                -- รอ 10 วินาที (10 วินาทีระหว่างการทำงานของ newArgs)
+                wait(60)
+                
+                -- อัพเดทค่า Fragments
+                CurrentFlagmentFucn = game:GetService("Players").LocalPlayer.Data.Fragments.Value
+            end
+
+            print("Player has accumulated enough fragments. Stopping.")
+            break  -- หยุดการทำงานเมื่อ Fragments เกิน 70,000
+        else
+            -- หากเลเวลยังไม่ถึง 2600 ให้เรียก Remote ด้วย args เดิม
+            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+            print("Running the action, player level: " .. CurrentLevelFunc)
+        end
+        
+        -- รอ 10 นาที (600 วินาที) ก่อนที่จะทำงานอีกครั้ง
+        wait(600)
+    end
+end
+
+-- เรียกใช้ฟังก์ชัน
+TradeCandyNonStop()
