@@ -114,6 +114,13 @@ function TradeCandyNonStop()
         [4] = 1
     }
 
+    local newArgs = {
+        [1] = "Candies",
+        [2] = "Buy",
+        [3] = 2,
+        [4] = 2
+    }
+
     -- ฟังก์ชันนี้จะทำงานทุกๆ 10 นาที
     while true do
         local CurrentLevelFunc = game.Players.LocalPlayer.Data.Level.Value
@@ -123,17 +130,9 @@ function TradeCandyNonStop()
         if CurrentLevelFunc >= 2600 then
             print("Player has reached level 2600. Switching to new args.")
             
-            -- เปลี่ยน args และเริ่มทำงานไปเรื่อยๆ จนกว่า Fragments จะเกิน 70,000
-            local newArgs = {
-                [1] = "Candies",
-                [2] = "Buy",
-                [3] = 2,
-                [4] = 2
-            }
-
             -- ทำงานต่อไปจนกว่า Fragments จะเกิน 70,000
-            while CurrentFlagmentFucn <= 70000 do
-                -- ทุกๆ 10 วินาทีจะทำการเปลี่ยน newArgs
+            while CurrentFlagmentFucn <= 500000 do
+                -- ใช้ newArgs
                 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(newArgs))
                 print("Running the action, current fragments: " .. CurrentFlagmentFucn)
                 
@@ -147,15 +146,19 @@ function TradeCandyNonStop()
             print("Player has accumulated enough fragments. Stopping.")
             break  -- หยุดการทำงานเมื่อ Fragments เกิน 70,000
         else
-            -- หากเลเวลยังไม่ถึง 2600 ให้เรียก Remote ด้วย args เดิม
+            -- หากเลเวลยังไม่ถึง 2600 ให้เรียก Remote ด้วย args เดิมและ newArgs
             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-            print("Running the action, player level: " .. CurrentLevelFunc)
+            print("Running the action with args, player level: " .. CurrentLevelFunc)
+            
+            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(newArgs))
+            print("Running the action with newArgs, player level: " .. CurrentLevelFunc)
         end
         
         -- รอ 10 นาที (600 วินาที) ก่อนที่จะทำงานอีกครั้ง
         wait(600)
     end
 end
+
 
 -- เรียกใช้ฟังก์ชัน
 TradeCandyNonStop()
