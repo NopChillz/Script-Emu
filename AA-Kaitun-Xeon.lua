@@ -1,7 +1,7 @@
 getgenv().Configuration = {
     ['Auto Sell'] = {
         ['At Wave'] = 20,
-        ['Auto Leave'] = true,
+        ['Auto Leave'] = false,
     },
     ['RedeemCode'] = true,
     ['Claim Quest'] = true,
