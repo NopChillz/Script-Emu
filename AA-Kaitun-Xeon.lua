@@ -1,3 +1,4 @@
+setfpscap(5)
 getgenv().Configuration = {
     ['Auto Sell'] = {
         ['At Wave'] = 20,
