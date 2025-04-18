@@ -1,3 +1,6 @@
+-- Open White Screen
+game:GetService("RunService"):Set3dRenderingEnabled(false)
+
 repeat task.wait() until game:IsLoaded()
 repeat task.wait() until game.Players
 repeat task.wait() until game.Players.LocalPlayer
