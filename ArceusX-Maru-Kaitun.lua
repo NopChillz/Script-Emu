@@ -6,28 +6,27 @@ wait(10)
 _G.Team = "Pirate" -- Marine / Pirate
 getgenv().Script_Mode = "Kaitun_Script"
 _G.MainSettings = {
-        ["EnabledHOP"] = true, -- เปิด HOP ( มันไม่มีอยู่ละใส่มาเท่ๆ )
-        ["UseGun"] = false,
-        ['FPSBOOST'] = true, -- ภาพกาก
-        ["FPSLOCKAMOUNT"] = 15, -- จำนวน FPS
-        ['WhiteScreen'] = true, -- จอขาว
-        ['CloseUI'] = false, -- ปิด Ui
-        ["NotifycationExPRemove"] = true, -- ลบ ExP ที่เด้งตอนฆ่ามอน
-        ['AFKCheck'] = 3600, -- ถ้ายืนนิ่งเกินวิที่ตั้งมันจะรีเกม
-        ["LockFragments"] = 50000, -- ล็อคเงินม่วง
-        ["LockFruitsRaid"] = { -- ล็อคผลที่ไม่เอาไปลงดัน
-            [1] = "Dough-Dough",
-            [2] = "Kisune-Kisune",
-            [3] = "Dragon-Dragon",
-            [4] = "Leopard-Leopard",
-            [5] = "Gas-Gas"
-        }
+    ["EnabledHOP"] = true,
+    ['FPSBOOST'] = true,
+    ["FPSLOCKAMOUNT"] = 10,
+    ['WhiteScreen'] = true,
+    ['CloseUI'] = false,
+    ["NotifycationExPRemove"] = true,
+    ['AFKCheck'] = 3600,
+    ["LockFragments"] = 50000,
+    ["LockFruitsRaid"] = {
+        [1] = "Dough-Dough",
+        [2] = "Dragon-Dragon",
+        [3] = "Kisune-Kisune",
+        [4] = "Leopard-Leopard",
+        [5] = "Gas-Gas",
     }
-_G.Fruits_Settings = { -- ตั้งค่าผล
-    ['Main_Fruits'] = {"Dragon-Dragon"}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
-    ['Select_Fruits'] = {"Dark-Dark", "Dragon-Dragon", "Quake-Quake", "Light-Light", "Leopard-Leopard", "Buddha-Buddha","Kitsune-Kitsune","Dough-Dough","Dragon-Dragon","Gas-Gas"} -- กินหรือซื้อตอนไม่มีผล
 }
-_G.Quests_Settings = { -- ตั้งค่าเควสหลักๆ
+_G.SharkAnchor_Settings = {
+    ["Enabled_Farm"] = true,
+    ['FarmAfterMoney'] = 2500000
+}
+_G.Quests_Settings = {        
     ['Rainbow_Haki'] = true,
     ["MusketeerHat"] = true,
     ["PullLever"] = true,
@@ -36,22 +35,26 @@ _G.Quests_Settings = { -- ตั้งค่าเควสหลักๆ
         ['UseFruits'] = true
     }        
 }
-_G.Races_Settings = { -- ตั้งค่าเผ่า
+_G.Races_Settings = {
     ['Race'] = {
         ['EnabledEvo'] = true,
         ["v2"] = true,
         ["v3"] = true,
         ["Races_Lock"] = {
-            ["Races"] = { -- Select Races U want
+            ["Races"] = {
                 ["Mink"] = true,
                 ["Human"] = false,
                 ["Fishman"] = true
             },
-            ["RerollsWhenFragments"] = 20000 -- Random Races When Your Fragments is >= Settings
+            ["RerollsWhenFragments"] = 20000
         }
     }
 }
-_G.Settings_Melee = { -- หมัดที่จะทำ
+_G.Fruits_Settings = {
+    ['Main_Fruits'] = {"Dragon-Dragon"}, -- ผลหลัก ถ้ายังไม่ใช่ค่าที่ตั้งมันจะกินจนกว่าจะใช่หรือซื้อ
+    ['Select_Fruits'] = {"Dark-Dark", "Dragon-Dragon", "Quake-Quake", "Light-Light", "Leopard-Leopard", "Buddha-Buddha","Kitsune-Kitsune","Dough-Dough","Dragon-Dragon","Gas-Gas"} -- กินหรือซื้อตอนไม่มีผล
+}
+_G.Settings_Melee = {
     ['Superhuman'] = true,
     ['DeathStep'] = true,
     ['SharkmanKarate'] = true,
@@ -59,19 +62,7 @@ _G.Settings_Melee = { -- หมัดที่จะทำ
     ['DragonTalon'] = true,
     ['Godhuman'] = true
 }
-_G.FarmMastery_Settings = {
-    ['Melee'] = true,
-    ['Sword'] = true,
-    ['DevilFruits'] = true,
-    ['Select_Swords'] = {
-        ["AutoSettings"] = true, -- ถ้าเปิดอันนี้มันจะเลือกดาบให้เองหรือฟาร์มทุกดาบนั่นเอง
-        ["ManualSettings"] = { -- ถ้าปรับ AutoSettings เป็น false มันจะฟาร์มดาบที่เลือกตรงนี้ ตัวอย่างข้างล่าง
-            "Saber",
-            "Buddy Sword"
-        }
-    }
-}
-_G.SwordSettings = { -- ดาบที่จะทำ
+_G.SwordSettings = {
     ['Saber'] = true,
     ["Pole"] = true,
     ['MidnightBlade'] = true,
@@ -87,15 +78,27 @@ _G.SwordSettings = { -- ดาบที่จะทำ
     ['TrueTripleKatana'] = true,
     ['CursedDualKatana'] = true
 }
-_G.SharkAnchor_Settings = {
-    ["Enabled_Farm"] = true,
-    ['FarmAfterMoney'] = 2500000
-}
-_G.GunSettings = { -- ปืนที่จะทำ
+_G.GunSettings = {
     ['Kabucha'] = true,
     ['SerpentBow'] = true,
     ['SoulGuitar'] = true
 }
+_G.FarmMastery_Settings = {
+    ['Melee'] = true,
+    ['Sword'] = true,
+    ['DevilFruits'] = true,
+    ['Select_Swords'] = {
+        ["AutoSettings"] = true,
+        ["ManualSettings"] = {
+            "Saber",
+            "Buddy Sword"
+        }
+    }
+}
+_G.Hop_Settings = {
+    ["Find Tushita"] = true
+}
+-- Script Here !!!
 -- Discord : RaMaFia
 getgenv().Key = "MARU-IGXEM-ENGQ-GHQFG-NO9R-AUPPL"
 getgenv().id = "1220380830300635207"
