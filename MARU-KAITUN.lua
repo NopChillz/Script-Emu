@@ -104,6 +104,7 @@ _G.Hop_Settings = {
     ["Find Tushita"] = false
 }
 -- Script Here !!!
+game:GetService("RunService"):Set3dRenderingEnabled(false)
 -- Discord : RaMaFia
 getgenv().Key = "MARU-0KTBL-WGQE-ZMP4P-D065-S1TX1"
 getgenv().id = "411861336553947137"
