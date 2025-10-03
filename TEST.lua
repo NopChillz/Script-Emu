@@ -101,7 +101,7 @@ _G.FarmMastery_Settings = {
     }
 }
 _G.Hop_Settings = {
-    ["Find Tushita"] = true
+    ["Find Tushita"] = false
 }
 -- Script Here !!!
 game:GetService("RunService"):Set3dRenderingEnabled(false)
