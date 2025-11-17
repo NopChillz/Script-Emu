@@ -12,7 +12,7 @@ local LocalPlayer = Players.LocalPlayer
 local PLACE_ID = game.PlaceId
 local CURRENT_JOB_ID = game.JobId
 local MAX_LEVEL = 2800
-local CHECK_INTERVAL = 10 -- 10 minutes
+local CHECK_INTERVAL = 600 -- 10 minutes
 
 local function ServerHop()
 	local success, result = pcall(function()
@@ -76,3 +76,4 @@ while true do
 
 	task.wait(1)
 end
+
