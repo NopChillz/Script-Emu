@@ -30,5 +30,6 @@ getgenv().Setting = {
 };
 
 -- script here
+game:GetService("RunService"):Set3dRenderingEnabled(false)
 getgenv().user_key = 'd22d87dd2582fea1c0056fbed16988ce'
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xQuartyx/QuartyzScript/main/OneClick/BF.lua"))()
