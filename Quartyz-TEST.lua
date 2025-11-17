@@ -22,7 +22,7 @@ getgenv().Setting = {
     ["Lock Fruits"] = { -- don't use or eat fruits in this list
         "Dough-Dough",
         "Kisune-Kisune",
-        "Leopard-Leopard",
+        "Tiger-Tiger",
         "T-Rex-T-Rex",
         "Dragon-Dragon"
     },
