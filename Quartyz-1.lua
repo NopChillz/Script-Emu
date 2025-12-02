@@ -12,9 +12,7 @@ getgenv().Setting = {
             "Dark-Dark",
             "Ice-Ice",
             "Buddha-Buddha",
-            "Flame-Flame",
             "Light-Light",
-            "Magma-Magma",
             -- u can configs add mores/remove and must end with , (comma symbol)
         }
         -- run this for get all fruit name `local t={};for _,v in pairs(game.ReplicatedStorage.Remotes.CommF_:InvokeServer("GetFruits"))do table.insert(t,v.Name)end;setclipboard(table.concat(t, "\n"))`
