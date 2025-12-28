@@ -33,3 +33,5 @@ getgenv().user_key = 'd22d87dd2582fea1c0056fbed16988ce'
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xQuartyx/QuartyzScript/main/OneClick/BF.lua"))()
 task.wait(5)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/NopChillz/Script-Emu/refs/heads/main/Check%20Level.lua"))()
+task.wait(1)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NopChillz/Script-Emu/refs/heads/main/Candy.lua"))()
