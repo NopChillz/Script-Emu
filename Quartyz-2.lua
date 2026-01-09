@@ -29,7 +29,7 @@ getgenv().Setting = {
 
 -- script here
 -- game:GetService("RunService"):Set3dRenderingEnabled(false)
-getgenv().user_key = '59a0d567132dccd3bd51761b3c285951'
+getgenv().user_key = '2cfe81cfe449d7a5fd18450fb84eae08'
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xQuartyx/QuartyzScript/main/OneClick/BF.lua"))()
 task.wait(5)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/NopChillz/Script-Emu/refs/heads/main/Check%20Level.lua"))()
